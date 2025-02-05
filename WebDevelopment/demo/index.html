@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        .main {
+            width: 1000px;
+            height: 540px;
+            background-color: teal;
+            border: 5px;
+        }
+
+        .row1 {
+            width: 1000px;
+            height: 100px;
+            background-color: yellow;
+            color: darkcyan;
+            font-size: 60px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            word-spacing: 6px;
+
+        }
+
+        .row2 {
+            width: 1000px;
+            height: 40px;
+            background-color: green;
+        }
+
+        .row3 {
+            width: 1000px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .row4 {
+            width: 1000px;
+            height: 150px;
+            background-color: blueviolet;
+            font-size: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            word-spacing: 6px;
+        }
+
+        .row5 {
+            width: 1000px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .row6 {
+            width: 1000px;
+            height: 50px;
+            background-color: teal;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            word-spacing: 6px;
+
+        }
+
+
+        .c1 {
+            width: 200px;
+            height: 40px;
+            background-color: lightblue;
+            color: red;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: left
+        }
+
+        .c2 {
+            width: 200px;
+            height: 40px;
+            background-color: rgb(230, 173, 201);
+            color: rgb(132, 0, 255);
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: right;
+        }
+
+        .c3 {
+            width: 200px;
+            height: 40px;
+            background-color: teal;
+            color: red(132, 0, 255);
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: right;
+        }
+
+        .c4 {
+            width: 200px;
+            height: 40px;
+            background-color: rgb(230, 223, 251);
+            color: rgb(132, 0, 255);
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: right;
+        }
+
+        .c5 {
+            width: 200px;
+            height: 40px;
+            background-color: rgba(230, 194, 173, 0);
+            color: rgb(132, 220, 255);
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: right;
+        }
+
+        .row3 .c1 {
+            width: 250px;
+            height: 200px;
+            background-color: aqua;
+
+        }
+
+        .row3 .c2 {
+            width: 750px;
+            height: 200px;
+            background-color: lightblue;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+
+        }
+
+        .row3 .c1 .r1 {
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgb(71, 15, 82);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row3 .c1 .r2 {
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgb(3, 36, 65);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row3 .c1 .r3 {
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgb(59, 3, 36);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row3 .c1 .r4 {
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgb(20, 189, 231);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row3 .c1 .r5 {
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgb(5, 146, 156);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row5 .c1 {
+            width: 330px;
+            height: 100px;
+            background-color: lightblue;
+            color: red;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: left
+        }
+        .row5 .c2 {
+            width: 330px;
+            height: 100px;
+            background-color:green;
+            color: red;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: left
+        }
+        .row5 .c3 {
+            width: 340px;
+            height: 100px;
+            background-color: gold;
+            color: red;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            float: left
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="row1">
+
+            my tech and technology
+
+        </div>
+        <div class="row2">
+            <div class="c1">home</div>
+            <div class="c2">about</div>
+            <div class="c3">course</div>
+            <div class="c4">gallery</div>
+            <div class="c5">contect us</div>
+        </div>
+        <div class="row3">
+            <div class="c1">
+                <div class="r1">home</div>
+                <div class="r2">about</div>
+                <div class="r3">course</div>
+                <div class="r4">gallery</div>
+                <div class="r5">contect us</div>
+            </div>
+            <div class="c2"> 
+                <img src="/image/download.jpeg" alt="no image" width="750px"height="200px">
+            </div>
+
+        </div>
+        <div class="row4">
+            our clients
+        </div>
+        <div class="row5">
+            <div class="c1">
+                <img src="/image/download.jpeg" alt="no image" width="330ppx"height="100px">
+            </div>
+            <div class="c2">
+                <img src="/image/download 123.jpeg" alt="no image" width="330ppx"height="100px">
+            </div>
+            <div class="c3"><img src="/image/download.jpeg" alt="no image" width="340ppx"height="100px"></div>
+        </div>
+        <div class="row6">
+            home|about|course|gallery|contect us
+        </div>
+
+    </div>
+</body>
+
+</html>

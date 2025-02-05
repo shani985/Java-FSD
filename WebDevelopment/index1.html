@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal</title>
+    <link rel="icon" href="/image/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Company HR Portal</h1>
+
+        <nav>
+
+            <ul>
+                <li class="navlink"><a href="#Employee Registration">Employee Registration</a></li>
+                <li class="navlink"><a href="#Employee Directory">Employee Directory</a></li>
+                <li class="navlink"><a href="#Contact US">Contact US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="/image/image1.jpg"alt="image"width="100%"height="600Px">
+    <section id ="Employee Registration"class="registration">
+        <h2> Employee Registration</h2>
+        <p>Fill the below form to registration as <em>employee</em></p>
+        <form action="">
+            <label for="firstname">Name: </label>
+            <input type="text"placeholder="Enter your name"id="firstname"><br><br>
+            <label for="email">Email: </label>
+            <input type="email"placeholder="Enter your Email"id="email"><br><br>
+            <label for="age">Age: </label>
+            <input type="number"placeholder="Enter your Age"id="age"><br><br>
+            <label for="password">Password:</label>
+            <input type="password"id="password"><br><br>
+            <label for="role"> select Role</label>
+            <select>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="">Product manager</option>
+                <option value="">Designer</option>
+                <option value=""> HR representative</option>
+            </select><br><br>
+            <label for="joiningdate"> select Joining date: </label>
+            <input type="date"id="joiningdate"><br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </section>
+    <section id="Employee Directory"class="employeetable">
+        <h2>Employee Directory</h2>
+        <p>Directory of all registration employee</p>
+        <table>
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee name</th>
+                <th>Employee role</th>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>shani</td>
+                <td>Software Engineer</td>
+            </tr>
+            <tr>
+                <td>120</td>
+                <td>amit</td>
+                <td>Hardware Engineer</td>
+            </tr>
+            <tr>
+                <td>124</td>
+                <td>Rajat</td>
+                <td>System Engineer</td>
+            </tr>
+            <tr>
+                <td>125</td>
+                <td>shivam</td>
+                <td>Systems Engineer</td>
+            </tr>
+        </table>
+
+    </section> 
+    <section id ="Contact US" class="contact">
+        <h2>Contect Us</h2>
+        <p> you can contect us at company@official.com or  visit us between 9AM - 6PM</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7008.562128528168!2d79.20165214103484!3d28.561321626299037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390aa3295ed802d7%3A0xa6724d72e867a80!2sNausna%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1736891067271!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+    </section>
+    <footer>
+        <p>&copy; 2025 company</p>
+    </footer>
+</body>
+
+</html>

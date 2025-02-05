@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway ticket booking</title>
+    <style>
+        button:hover{
+            color: green;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book your railway ticket</h1>
+    <form action="">
+        <label for="username">User name</label>
+        <input type="text"id="username"name="name" placeholder="enter your name"required><br><br>
+        <label for="email">User Email</label>
+        <input type="email"id="email"name="email"  placeholder="enter your name"required><br><br>
+        <label for="from">Departure station</label>
+        <input type="text"id="from"name="from" placeholder="where are traveling from"required><br><br>
+        <label for="to">Destination station</label>
+        <input type="text"id="to" name="to"placeholder="where are traveling from"required><br><br>
+        <label for="Date">Journey date</label>
+        <input type="date"id="date" name="date" placeholder="enter your name"><br><br>
+        <label for="train">Select Train type</label>
+        <select name="train" id="train"required>
+            <option value="Express">Expreess</option>
+            <option value="superfast">superfast</option>
+            <option value="Local">Local</option>
+        </select><br><br>
+        <label for="class">Select Class :</label>
+        <select name="class" id="class"required>
+            <option value="Sleeper">Sleeper</option>
+            <option value="Second Ac">Second AC</option>
+            <option value="First AC">First Ac</option>
+            <option value="Third AC">Third Ac</option>
+        </select><br><br>
+        <label for="passenger">Number of passenger</label>
+        <input type="number"id="passenger"name="passenger"min="1" placeholder="how many passenger "required><br><br>
+        <label for="contect"> ContectNumber </label>
+        <input type="number"id="contect"name="contect"placeholder="Enter your contect number "required><br><br>
+        <button  type="submit">Book Ticket</button>
+        <button type="reset">clear Farm</button>
+        
+
+    </form>
+    
+</body>
+</html>

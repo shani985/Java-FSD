@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <!-- readonly
+    disable
+    max
+    min
+    maxlength -->
+    <form action="">
+        <fieldset>
+
+            <legend>Enquary</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="enter your name" autofocus="" required /><br><br>
+            Email:<input type="email" name="email" required /><br><br>
+            Address: <input type="text" name="Address" maxlength="20"><br><br>
+            Gender:
+            <input type="radio" value="male" name="gender" checked /> Male
+            <input type="radio" value="Female" name="gender" /> Female
+            <input type="radio" value="other" name="gender" /> Other
+            <br><br>
+            color:<input type="color" name=color /> <br><br>
+            MobileNumber:
+            <input type="number" name="number" required> <br><br>
+            Country:
+            <select name="" id="">
+                <option value="">Please select a country</option>
+                <optgroup label="ASIA">
+                    <option value="India">India</option>
+                    <option value="ShreeLanka">ShreeLanka</option>
+                </optgroup>
+                <option value="Usa">Usa</option>
+                <option value="SouthAfrica">SouthAfrica</option>
+                <option value="England">England</option>
+            </select> <br><br>
+            Age:
+            <input type="number" name="age" min="1" max="40"><br><br>
+
+            Habbies:
+            <input type="checkbox" name="Habbies[]" />Dancing
+            <input type="checkbox" name="Habbies[]" />Reading
+            <input type="checkbox" name="Habbies[]" />Singing
+
+            <br><br>
+            Image:
+            <input type="file" name="Image" />
+            <br><br>
+            Password:<input type="password" name="pass" /> <br><br>
+            colender:<input type="date" name="date" /> <br><br>
+            Date Time : <input type="datetime-local" name="datetime-local" /> <br><br>
+            Time :<input type="time" name="time" /> <br><br>
+            weak :<input type="week" name="weak" /> <br><br>
+            month :<input type="month" name="month"> <br><br>
+            range: <input type="range" name="range" /> <br><br>
+            Secret:<input type="hidden" name="value" /> <br><br>
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </fieldset>
+    </form>
+</body>
+
+</html>

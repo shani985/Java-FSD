@@ -1,0 +1,44 @@
+.container {
+    width: 1000px;
+    height: 400px;
+    background-color: red;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+    /* border: 5px solid black; */
+    /* border: 5px dashed black; */
+    border: 5px dotted black;
+}
+
+.container:hover {
+    background-color: green;
+    text-align: left;
+    color: blue;
+    height: 300px;
+}
+
+.main {
+    margin-top: 5px;
+    border-top: 5px solid black;
+    font-size: 70px;
+    border-left: 5px solid red;
+    border-bottom: 5px solid green;
+    border-right: 5px solid yellow;
+}
+
+.c1 {
+    margin-top: 3px;
+    width: 400px;
+    height: 200px;
+    border-top: 5px solid black;
+    font-size: 70px;
+    border-left: 5px solid red;
+    border-bottom: 5px solid green;
+    border-right: 5px solid red
+}
+
+.r1 {
+    width: 385px;
+    height: 185px;
+    border: 8px solid brown;
+}
