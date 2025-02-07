@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="start()">START</button>
+    <button onclick="stop()">STOP </button> -->
+    <h1 id="h1">
+
+    </h1>
+    <button onclick="stop()">Stop</button>
+</body>
+<script>
+
+var my=setInterval(count,1000);
+var c= 0;
+function count(){
+    document.getElementById('h1').innerText=c;
+    c++;
+}
+function stop(){
+    clearInterval(my);
+}
+
+
+
+
+
+
+//     var my;
+//     function start() {
+//         my = setTimeout(
+//             function () {
+//                 document.write("<h1>wsCube Tech</h1>");
+//             },
+//             5000
+//         );
+//     }
+//     function stop() {
+// clearTimeout(my);
+// alert("time out stop");
+//     }
+
+</script>
+
+</html>
