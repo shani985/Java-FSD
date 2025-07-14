@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 2 </title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv")
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+        var arr=[332,45,3,54,6,578,89,90]
+        myprint("<ul>function -2 </ul>")
+        function showArray(arr1){
+          myprint("in function :before: "+arr1);
+          arr1[2]=99;
+          myprint("in function :after: "+arr1);
+        }
+        showArray(arr);
+        myprint("out function  "+arr);
+        myprint("----------")
+        function sumArray(arr1){
+            var sum=0;
+            for(i in arr1){
+
+                sum=sum+arr1[i];
+            }
+            return sum;
+        }
+            var res =sumArray(arr);
+            myprint(res);
+    </script>
+
+</body>
+
+</html>

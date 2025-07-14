@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: If statement</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"> </div>
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+
+        myprint("<u>For loop </u> ")
+        for (var i = 1; i <= 5; i++) {
+            myprint(i);
+        }
+        for (var i = 1; i <= 5; i++) {
+            if (i % 2 == 0) {
+                myprint(i);
+            }
+
+        }
+        myprint("Done");
+
+
+    </script>
+</body>
+
+</html>

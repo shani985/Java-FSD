@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Custom Objects - 5 </title>
+ <style>
+ div{
+ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ height:600px;
+ width:800px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>"
+ }
+ print("<u> Custom Objects - 5 </u> ")
+ function show(){ }
+ function Customer(cid,cname,email,phone){
+ this.cid=cid;
+ this.cname=cname;
+ this.email=email;
+ this.phone=phone;
+ } 
+ var cust1=new Customer(55,"sri","sri@jlc",55555);
+ var cust2=new Customer(99,"vas","vas@jlc",99999);
+ var cust3=new Customer();
+ print(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone);
+ print(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone);
+ print(cust3.cid+" "+cust3.cname+" "+cust3.email+" "+cust3.phone);
+ print(typeof cust1)
+ print(typeof cust2)
+ print(typeof Customer)
+ print(typeof show)
+ cust1.accno=101;
+ cust1.bal=25000;
+ print(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone+" "
++cust1.accno+" "+cust1.bal);
+ print(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone+" "
++cust2.accno+" "+cust2.bal);
+ Customer.prototype.branchCode="B-111";
+ Customer.prototype.city="Bangalore";
+ print(cust1.cid+" "+cust1.cname+" "+cust1.email+" "+cust1.phone+" "+
+cust1.accno+" "+cust1.bal+" "+cust1.branchCode+" "+cust1.city);
+ print(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone+" "+
+cust2.accno+" "+cust2.bal+" "+cust2.branchCode+" "+cust2.city);
+ print("Done");
+ </script>
+</body>
+</html>

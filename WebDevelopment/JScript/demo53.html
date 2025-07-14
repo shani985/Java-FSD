@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - String Object - 3</title>
+ <style>
+ div {
+ margin: 50px;
+ border: 2px solid red;
+ border-radius: 10px;
+ width: 600px;
+ font-size: 25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv = document.getElementById("my-data-div");
+ mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+ }
+ print("<u>Exploring - String Object - 3</u> ")
+ var str = "Hello Guys-CourseCube";
+ print(str);
+ var resStr = str.slice(6);
+ print(resStr);
+ var resStr = str.slice(6, 9);
+ print(resStr);
+ var resStr = str.slice(6, 10);
+ print(resStr);
+ print("------------------"); 
+  var str = "Hello Guys Course Cube";
+ print(str);
+ var res = str.includes("Hello");
+ print(res);
+ var res = str.includes("Cube");
+ print(res);
+ var res = str.includes("Guys");
+ print(res);
+ var res = str.includes("Course");
+ print(res);
+ var res = str.includes("Hai");
+ print(res);
+ print("------------------");
+ var myString = "Hello Guys Course Cube";
+ var myword1 = 'Guys';
+ var myword2 = 'JLC';
+ var myresult = `The word ${myword1} ${myString.includes(myword1)? 'is' : 'is not'} found`
+ print(myresult)
+ var myresult = `The word ${myword2} ${myString.includes(myword2)? 'is' : 'is not'} found`
+ print(myresult)
+ var x = myString.includes(myword1) ? 'is' : 'is not'
+ var myresult1 = "The word" + myword1 + " " + x + " found";
+ print(myresult1)
+ print("Done");
+ </script>
+</body>
+ </htm

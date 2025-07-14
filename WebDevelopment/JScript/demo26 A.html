@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: If statement</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+
+        myprint("<u>array </u> ")
+        // var arr3 = new Array("shani mourya");
+        // myprint(arr3);
+        // myprint(arr3.length);
+        var arr = new Array(5);
+        arr[0] = 10;
+        arr[2] = 99.9;
+        arr[4] = "shani mourya";
+        arr[5] = true;
+        arr[10] = 'ok';
+ 
+        for (var i = 0; i < arr.length; i++) {
+            myprint(arr[i])
+        }
+        myprint("---------------------- ")
+        for (i in arr) {
+            myprint(arr[i]);
+        }
+        myprint("----------------")
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Functions -7 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>JS : Functions- 7 </u> ")
+
+        var p = 10;
+        print("Outside show : " + p);
+        function show() {
+            var p = 20; //
+            function display1() {
+                var p = 30
+                print("Inside display1 : " + p);
+            }
+            function display2() {
+                var p = 40
+                print("Inside display2 : " + p);
+            }
+            print("Inside show : " + p);
+            display1();
+            print("Inside show : " + p);
+            display2();
+            print("Inside show : " + p);
+        }
+
+        show();
+        print("Outside show : " + p);
+        print("------------");
+        print("Done");
+    </script>
+</body>
+
+</html>

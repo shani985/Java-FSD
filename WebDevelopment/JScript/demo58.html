@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Exploring - Array Object-5 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 600px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>Exploring - Array Object - 5</u> ")
+        var myarr = ["Angular", "React", "MicroServices"];
+        var iterator = myarr.keys();
+        for (let myindex of iterator) {
+            print(myindex);
+            console.log(myindex);
+        }
+ print("---------------");
+        var iterator = myarr.values();
+        for (let myvalue of iterator) {
+            print(myvalue);
+       console.log(myvalue);
+        }
+print("---------------");
+        var iterator = myarr.entries();
+        for (let myentry of iterator) {
+            print(myentry);
+            console.log(myentry);
+        }
+        print("Done");
+    </script>
+</body>
+
+</html>

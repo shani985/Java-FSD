@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - String Object - 1</title>
+ <style>
+ div{ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ width:600px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>"
+ }
+ print("<u>Exploring - String Object - 1</u> ")
+ var str="Hello Guys";
+ print(str.length);
+ print(str.charAt(0))
+ print(str.charAt(1))
+ print(str.charCodeAt(0))
+ print(str.charCodeAt(1))
+ print(str.codePointAt(0))
+ print(str.codePointAt(1))
+ print("------------------");
+ var str="srinivas";
+ print(str.indexOf("s"));
+ print(str.indexOf("r"));
+ print(str.indexOf("i"));
+ print("------------------"); 
+  print(str.lastIndexOf("s"));
+ print(str.lastIndexOf("r"));
+ print(str.lastIndexOf("i"));
+ print("------------------");
+ print(str.startsWith("sri"))
+ print(str.startsWith("vas"))
+ print(str.endsWith("sri"))
+ print(str.endsWith("vas"))
+ print("------------------");
+ var str="Hello Guys";
+ print(str);
+ print(str.toLocaleLowerCase());
+ print(str.toLocaleUpperCase());
+ print(str.toLowerCase());
+ print(str.toUpperCase());
+ print("------------------");
+ var str1="Hello";
+ var str2=str1.concat("Guys");
+ print(str1);
+ print(str2);
+ print("------------------");
+ var str3=str1.repeat(3);
+ print(str3);
+ print("------------------");
+ print("Done");
+ </script>
+</body>
+</html> 

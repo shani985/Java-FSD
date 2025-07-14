@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - Number Object - 2 </title>
+ <style>
+ div {
+ margin: 50px;
+ border: 2px solid red;
+ border-radius: 10px;
+ width: 500px;
+ font-size: 25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv = document.getElementById("my-data-div");
+ mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+ }
+ print("<u>Exploring - Number Object - 2</u> ")
+ var num1 = 12345.2789;
+ print(num1.toFixed()); // 12345
+ print(num1.toFixed(1)); // 12345.3
+ print(num1.toFixed(2)); // 12345.28
+ print(num1.toFixed(5));
+ print(num1.toFixed(6));
+ print("----------------")
+ var num2 = 2.34;
+ print(num2.toFixed()); //2
+ print(num2.toFixed(1)); //2.3
+ print(num2.toFixed(2)); //2.34
+ var num3 = 2.35;
+ print(num3.toFixed()); //2
+ print(num3.toFixed(1)); //2.4
+ print(num3.toFixed(2));
+ var num4 = 2.55;
+ print(num4.toFixed());
+ print(num4.toFixed(1));
+ print(num4.toFixed(2));
+ print("----------------")
+ var num1 = 5.123456;
+ print(num1.toPrecision());
+ print(num1.toPrecision(5));
+ print(num1.toPrecision(4));
+ print(num1.toPrecision(3));
+ print(num1.toPrecision(2));
+ print(num1.toPrecision(1));
+ print("----------------") 
+  num2 = 0.000123;
+ print(num2.toPrecision());
+ print(num2.toPrecision(5));
+ print(num2.toPrecision(4));
+ print(num2.toPrecision(3));
+ print(num2.toPrecision(2));
+ print(num2.toPrecision(1));
+ print("----------------")
+ num3 = 1234.5;
+ print(num3.toPrecision());
+ print(num3.toPrecision(5));
+ print(num3.toPrecision(4));
+ print(num3.toPrecision(3));
+ print(num3.toPrecision(2));
+ print(num3.toPrecision(1));
+ print("----------------")
+ print("Done");
+ </script>
+</body>
+</html> 

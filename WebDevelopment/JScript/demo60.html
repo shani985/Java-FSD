@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Exploring - Array Object - 7 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 600;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>Exploring - Array Object - 7 </u> ")
+        var numArray = [1, 2, 3, 4, 5];
+        print(numArray);
+        var sameArray = numArray.map(x => x);
+        print(sameArray)
+        var squareArray = numArray.map(x => x * x);
+        print(squareArray)
+        var cubeArray = numArray.map(x => x * x * x);
+        print(cubeArray)
+        print("-----------------------------");
+
+        function get(x) {
+            return x;
+        }
+        function square(x) {
+            return x * x;
+        }
+        function cube(x) {
+            return x * x * x;
+        }
+        var numArray = [1, 2, 3, 4, 5];
+        print(numArray);
+        var sameArray = numArray.map(get);
+        print(sameArray)
+        var squareArray = numArray.map(square);
+        print(squareArray)
+        var cubeArray = numArray.map(cube);
+        print(cubeArray)
+        print("Done");
+    </script>
+</body>
+
+</html>

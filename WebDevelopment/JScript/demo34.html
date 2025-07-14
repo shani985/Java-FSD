@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functio 5</title>
+    <Style>
+        #mydiv {
+
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+
+        }
+    </Style>
+
+
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>";
+        }
+
+        myprint("<u> Functions-4 </u> ")
+        function show() {
+            var a = 37;
+            myprint(a);
+        }
+        show();
+        show();
+        myprint("---------------------------------")
+        var x = 99;
+        function show2() {
+            myprint(x);
+            x = x + 10;
+            myprint(x);
+        }
+        show2();
+        show2();
+        myprint("----------------------------------------")
+    </script>
+
+</body>
+
+</html>

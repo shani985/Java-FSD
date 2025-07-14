@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Screen Object</title>
+    <style>
+        input,
+        h1,
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 800px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function display(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        display("<u>Screen Object:")
+        display("Total Width :" + window.screen.width);
+        display("Total Height :" + window.screen.height);
+        display("Available Width :" + window.screen.availWidth);
+        display("Available Height :" + window.screen.availHeight);
+        display("colorDeptht :" + window.screen.colorDepth);
+        display("pixelDepth :" + window.screen.pixelDepth);
+        display("History Length :" + history.length);
+        console.log("History Length :" + history.length);
+    </script>
+</body>
+
+</html>

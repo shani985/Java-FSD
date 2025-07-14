@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Navigator and Histroy Object</title>
+    <style>
+        input,
+        h1,
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 800px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function display(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        display("<u>Navigator Object :")
+        display("Browser :" + navigator.appName);
+        display("Browser Code:" + navigator.appCodeName);
+        display("Browser Version:" + navigator.appVersion);
+        display("PlatForm :" + navigator.platform);
+        display("Cookies Enabled :" + navigator.cookieEnabled);
+        display("Java Enabled :" + navigator.javaEnabled());
+        display("languages :" + navigator.languages);
+        display("User Agent :" + navigator.userAgent);
+        display("Vendor :" + navigator.vendor);
+        display("History Length :" + history.length);
+        // history.back();
+        // history.forward();
+        // history.go(-1);
+        // history.go(1);
+    </script>
+</body>
+
+</html

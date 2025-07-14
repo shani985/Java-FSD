@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>JS : Events -Listeners </title> 
+<style> 
+    p{  
+       font-size: 25px; 
+       font-family: Cambria; 
+       border-radius: 15px; 
+       border: 2px solid red; 
+       margin: 50px; 
+       padding: 25px; 
+    }     
+  </style> 
+</head>     
+<body> 
+<h2>Welcome to JLC!!!</h2>     
+<p id="mypara1"> JS Training  </p> 
+<p id="mypara2"> React  Training  </p> 
+<p id="mypara3"> Angular Training  </p> 
+ 
+<script> 
+    //window.alert("Hello Guys , How are You?"); 
+ 
+   var mypara1 = document.getElementById("mypara1"); 
+   mypara1.addEventListener("click", function (){ 
+        window.alert("Click on JS Training"); 
+        window.console.log('Click on JS Training'); 
+    } ); 
+ 
+    var mypara2 = document.getElementById("mypara2"); 
+    mypara2.addEventListener("dblclick", function (){ 
+        alert("Double Click on React Training"); 
+        console.log('Double Click  on JS Training'); 
+    } ); 
+ 
+    var mypara3 = document.getElementById("mypara3"); 
+    mypara3.addEventListener("mouseover", function (){ 
+        console.log('MouseOver on Angular Training'); 
+    } ); 
+ 
+    mypara3.addEventListener("mouseout", function (){ 
+        console.log('MouseOut on Angular Training'); 
+    } ); 
+</script> 
+</body> 
+</html>

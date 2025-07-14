@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - Date Object - 3</title>
+ <style>
+ div {
+ height: 100px;
+ width: 300px;
+ background-color: bisque;
+ font-size: 50px;
+ text-align: center;
+ padding-top: 25px;
+ }
+ span {
+ font-size: 25px;
+ }
+ </style> 
+</head>
+<body onload="formatTime();">
+ <div id="mydata-div"> </div>
+
+ <form name="myclock">
+ <span> <input type="radio" id="format-12" name="mytime" checked>
+12 Hour Format </span>
+ <span> <input type="radio" id="format-24" name="mytime" >
+ 24 Hour Format </span>
+ </form>
+
+ <script>
+ function formatTime() {
+ var cd = new Date();
+ var hh = cd.getHours();
+ var mm = cd.getMinutes();
+ var ss = cd.getSeconds();
+ var dStr = hh + ":" + mm + ":" + ss;
+ document.getElementById("mydata-div").innerHTML = dStr;
+
+ if (document.myclock.mytime[0].checked) {
+ if (mm <= 9)
+ mm = "0" + mm;
+ if (ss <= 9)
+ ss = "0" + ss;
+ if (hh > 12) {
+ hh = hh - 12;
+ ad = "P.M";
+ } else {
+ hh = hh;
+ ad = "A.M";
+ }
+ if (hh == 12)
+ ad = "P.M";
+ if (hh == 00)
+ hh = "12";
+ dStr = ((hh <= 9) ? "0" + hh : hh) + ":" + mm + ":" + ss + ad;
+ document.getElementById("mydata-div").innerHTML = dStr;
+ }
+ if (document.myclock.mytime[1].checked) {
+ if (mm <= 9)
+ mm = "0" + mm;
+ if (ss <= 9)
+ ss = "0" + ss;
+ if (hh <= 9)
+ hh = "0" + hh;
+ dStr = ((hh <= 9) ? "0" + hh : hh) + ":" + mm + ":" + ss;
+ document.getElementById("mydata-div").innerHTML = dStr;
+ }
+
+ setTimeout("formatTime()", 1000);
+
+ }
+ </script>
+</body>
+</html> 

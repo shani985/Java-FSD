@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+        #mytable{
+            margin: 5opx;
+            border:3px solid green;
+            border-radius: 10px;
+            width:30px;
+            padding:20px;
+            color:brown ;
+            background-color: blue;
+            line-height: 2;;
+        }
+        ul{
+            list-style: circle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+
+    </div>
+    <script>
+
+        function myprint(data) {
+
+            var mydiv = document.getElementById("mydiv")
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+        myprint("<u>creating html element with js</u>")
+        var arr = ["java", "python", "spring", "mongoDB"];
+        myprint(arr)
+        var str = "<ul>";
+        for (i in arr) {
+            str = str + "<li>" + arr[i] + "</li>"
+        }
+        str = str + "</ul>"
+        myprint(str);
+
+
+        var str = "<table id='mytable'>";
+        for (i in arr) {
+            str = str + "<tr><td>" + arr[i] + "</td></tr>"
+        }
+        str=str+"</table>"
+        myprint(str);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - Math Object </title>
+ <style>
+ div {
+ margin: 50px;
+ border: 2px solid red;
+ border-radius: 10px;
+ height: 600px;
+ width: 500px;
+ font-size: 25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv = document.getElementById("my-data-div");
+ mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+ }
+ print("<u>Exploring - Math Object </u> ")
+ print(Math.sqrt(25));
+ print(Math.cbrt(27));
+ print(Math.pow(5, 2));
+ print(Math.ceil(1.234));
+ print(Math.ceil(1.567));
+ print(Math.floor(1.234));
+ print(Math.floor(1.567));
+ print(Math.round(5.234));
+ print(Math.round(5.567));
+ print(Math.sign(-99));
+ print(Math.sign(99));
+ print(Math.trunc(123.456));
+ print(Math.max(10, 20, 30, 40, 50));
+ print(Math.min(10, 20, 30, 40, 50));
+ print(Math.random()); //between 0 and 1
+ var rnum = Math.trunc(Math.random() * 10);
+ print(rnum);
+ var rnum = Math.trunc(Math.random() * 100);
+ print(rnum);
+ var rnum = Math.trunc(Math.random() * 1000);
+ print(rnum);
+ print("Done");
+ </script>
+</body>
+</html> 

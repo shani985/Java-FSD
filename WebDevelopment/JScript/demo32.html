@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Functions - 3 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u> Functions-3 </u> ")
+        var show = function () {
+            print("i am show()")
+            print("i am show()")
+        };
+        show();
+        print(typeof show);
+        print("------------");
+        var add = function (a, b) {
+            var s = a + b;
+            return s;
+        };
+
+        var res = add(10, 20);
+        print(res);
+        print(typeof add);
+
+        print("------------");
+        print("Done");
+    </script>
+</body>
+</htm>

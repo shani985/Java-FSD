@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JS : Custom Objects - 3</title>
+  <style>
+    div {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      height: auto;
+      width: 500px;
+      font-size: 25px;
+      background-color: goldenrod;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="my-data-div"></div>
+
+  <script>
+    function print(data) {
+      const mydiv = document.getElementById("my-data-div");
+      mydiv.innerHTML += data + "<br/>";
+    }
+
+    print("<u>Custom Objects - 3</u>");
+
+    const cust = {
+      cid: 101,
+      cname: "Sri",
+      phone: 12345,
+
+      getCid: function () {
+        return this.cid;
+      },
+      getCname: function () {
+        return this.cname;
+      },
+      getPhone: function () {
+        return this.phone;
+      },
+      setCid: function (cid) {
+        this.cid = cid;
+      },
+      setCname: function (cname) {
+        this.cname = cname;
+      },
+      setPhone: function (phone) {
+        this.phone = phone;
+      }
+    };
+
+    console.log(cust);
+
+    print(typeof cust);
+    print("Way to call Object functions:");
+    print("CID: " + cust.getCid());
+    print("CName: " + cust.getCname());
+    print("Phone: " + cust.getPhone());
+
+    // Modify the object values
+    cust.setCname("Srinivas");
+    cust.setPhone(9999);
+
+    print("After Updating:");
+    print("CID: " + cust.getCid());
+    print("CName: " + cust.getCname());
+    print("Phone: " + cust.getPhone());
+
+    print("Done");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Exploring - Date Object -1</title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 600px;
+            width: 800px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>Exploring - Date Object - 1</u> ")
+        var cd = new Date(); //Current Date
+        print(cd);
+        var yy = cd.getFullYear();
+        var mm = cd.getMonth() + 1;
+        var dd = cd.getDate();
+        var day = cd.getDay();
+        print(dd + " / " + mm + " / " + yy + " : " + day);
+        var hh = cd.getHours();
+        var mi = cd.getMinutes();
+        var ss = cd.getSeconds();
+        var ms = cd.getMilliseconds();
+        print(hh + "-" + mi + "-" + ss + "-" + ms);
+        print("getTime() : " + cd.getTime()) //Timestamp
+        var dueDate = new Date();
+        print(dueDate);
+        dueDate.setDate(5);
+        dueDate.setMonth(1);
+        dueDate.setFullYear(2021);
+        dueDate.setHour
+        dueDate.setMinutes(30);
+        dueDate.setSeconds(30);
+        dueDate.setMilliseconds(500);
+        print(dueDate);
+        var dd = new Date(2021, 1, 5, 4, 30, 30, 500);
+        print(dd);
+        print("Done");
+    </script>
+</body>
+
+</html>

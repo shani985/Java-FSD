@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Exploring - Array Object - 9 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 600px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>Exploring - Array Object - 9 </u> ")
+
+        var numArray = [1, 2, 3, 4, 5];
+        print(numArray);
+        function sumNumbers(x, y) {
+            return x + y;
+        }
+        function mulNumbers(x, y) {
+            return x * y;
+        }
+        result = numArray.reduce(sumNumbers);
+        print(result);
+        result = numArray.reduce(mulNumbers);
+        print(result);
+        print("-----------------------------------");
+        result = numArray.reduce((x, y) => x + y);
+        print(result);
+        result = numArray.reduce((x, y) => x * y);
+        print(result);
+        print("-----------------------------------");
+        result = numArray.reduce((x, y) => x + y, 10);
+        print(result);
+        result = numArray.reduce((x, y) => x * y, 10);
+        print(result);
+        print("-----------------------------------");
+        result = numArray.reduceRight((x, y) => x + y, 0);
+        print(result);
+        result = numArray.reduceRight((x, y) => x * y, 1);
+        print(result);
+        print("-----------------------------------");
+        result = numArray.reduce((x, y) => (x > y) ? x : y, 1);
+        print(result);
+        result = numArray.reduce((x, y) => (x < y) ? x : y, 1);
+        print(result);
+        print("Done");
+
+    </script>
+</body>
+
+</html>

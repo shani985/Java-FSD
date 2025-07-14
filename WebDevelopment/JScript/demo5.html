@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatype and variable</title>
+    <style>
+         #mydiv{
+            border:5px solid red;
+            border-radius: 60px;
+            font-size: 30px;
+            width:50%;
+            margin:50px;
+            padding: 20px;
+            background-color: green;    
+            text-align: center;
+            color: red;
+       }
+    </style>
+</head>
+<body>
+    <h1>Data Type and variable </h1> 
+    <div id="mydiv"></div>
+    <script>
+        function myprint(data){
+            var mydiv=document.getElementById("mydiv");
+            mydiv.innerHTML=mydiv.innerHTML + data + "<br/>";
+        }
+        myprint("<i>1.data type and variable <br/<i");
+        var x=73;
+        myprint(x);
+        myprint(typeof(x));
+        var y=73.6;
+        myprint(y)
+        myprint(typeof(y));
+        var flag =true;
+        myprint(flag);
+        myprint(typeof(flag))
+        var flag1 =false;
+        myprint(flag1);
+        myprint(typeof(flag1))
+        var name="shani"
+        myprint(name);
+        myprint(typeof(name));
+        var myarr=[1,2,3,4,5,6];
+        myprint(myarr);
+        myprint(typeof(myarr));
+        var mydob=new Date();
+        myprint(mydob);
+        myprint(typeof(mydob));
+
+    </script>
+</body>
+</html>

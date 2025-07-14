@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Location Object</title>
+    <style>
+        input,
+        h1,
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 500px;
+            width: 800px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function display(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        display("<u>Location Object:")
+        display("Location :" + window.location);
+        display("href :" + window.location.href);
+        display("host :" + window.location.host);
+        display("hostname :" + window.location.hostname);
+        display("pathname :" + window.location.pathname);
+        display("port :" + window.location.port);
+        display("protocol :" + window.location.protocol);
+        display("History Length :" + history.length);
+    </script>
+</body>
+
+</html>

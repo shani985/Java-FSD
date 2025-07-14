@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Closures </title>
+ <style>
+ div{
+ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ height:700px;
+ width:500px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>"
+ }
+ print("<u>JS : Closures </u> ")
+
+ var counter=0;
+ function increment1(){
+ counter++;
+ }
+ increment1();
+ print("Counter : "+counter)
+ increment1();
+  print("Counter : "+counter);
+ increment1();
+ print("Counter : "+counter);
+ print("------------");
+ counter=counter+5; // Problem
+ increment1();
+ print("Counter : "+counter);
+ print("------------");
+
+ function increment2(){
+ var counter=0;
+ counter++;
+ return counter;
+ }
+ print("Counter : "+increment2());
+ print("Counter : "+increment2());
+ print("Counter : "+increment2());
+ // Problem
+ print("------------");
+
+ //use Java Script Closure to fix
+ var increment = (
+ function () {
+ var counter = 0; //Only Once
+ console.log("Hello Guys"); ////Only Once
+ return function () {
+ counter++;
+ return counter
+ }
+ }
+ )();
+
+ print("Counter : "+increment());
+ print("Counter : "+increment());
+ print("Counter : "+increment());
+ print("Counter : "+increment()); 
+ print("Counter : "+increment());
+ print("Counter : "+increment());
+ print("Done");
+ // A closure is a function having access to the parent scope,
+ // even after the parent function has closed.
+ //The self-invoking function only runs once.
+ // It sets the counter to zero (0), and returns a function expression.
+ </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Custom Objects - 4 </title>
+ <style>
+ div{
+ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ height:600px;
+ width:500px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>"
+ }
+ print("<u> Custom Objects - 4 </u> ")
+
+ var cust={
+ cid:99,
+ cname:"SD",
+ phone:9999,
+
+ get customerId(){
+ return this.cid;
+ },
+ get customerName(){
+ return this.cname;
+ },
+ get customerPhone(){
+ return this.phone;
+ },
+ set customerId(cid){
+ this.cid=cid;
+ },
+ set customerName(cname){
+ this.cname=cname;
+ },
+ set customerPhone(phone){
+ this.phone=phone;
+ }
+ }
+ print("Way to access Object getters");
+ print(cust.customerId);
+ print(cust.customerName);
+ print(cust.customerPhone);
+ print("Way to access Object setters");
+ cust.customerName="Srinivas";
+ cust.customerPhone=12345;
+ print("Way to access Object getters");
+ print(cust.customerId);
+ print(cust.customerName);
+ print(cust.customerPhone);
+ print("Done");
+ </script>
+</body>
+</html> 

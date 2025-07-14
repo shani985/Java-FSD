@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: If statement</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"> </div>
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+
+        myprint("<u>array </u> ")
+        var arr = [1, 2, 3, 4, 5, 6];//static declaration
+        myprint(arr);
+        myprint("---------------------")
+        myprint(typeof (arr));
+        for (var i = 0; i < arr.length; i++) {
+            myprint(arr[i]);
+        }
+        myprint("----------------------")
+        var arr1 = ["java", "python", "Dsa", "daa"]
+        myprint(arr1);
+        myprint(typeof (arr1))
+        for (var x in arr1) {
+            myprint(arr1[x]);
+        }
+        myprint("------------------------------")
+        for (var i = 0; i < arr1.length; i++) {
+            myprint(arr1[i]);
+        }
+        myprint("-----------------Dynamic declaration-------------")
+        var arr2 = new Array(34, 56, 74, 228, 44);
+        for (var x in arr2) {
+            myprint(arr2[x]);
+        }
+        myprint("------------------------------")
+        for (var i = 0; i < arr2.length; i++) {
+            myprint(arr2[i]);
+        }
+
+        var arr3 = new Array(5);
+        myprint(arr3);
+        myprint(arr.length);
+         
+    
+
+
+    </script>
+</body>
+
+</html>

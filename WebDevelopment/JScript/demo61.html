@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Exploring - Array Object - 8 </title>
+    <style>
+        div {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 600px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-data-div"> </div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("my-data-div");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+        }
+        print("<u>Exploring - Array Object - 8 </u> ")
+        var ageArray = [10, 30, 15, 25, 17, 16, 39];
+        print(ageArray) //1
+        function validAgeForVote(age) {
+            console.log(age)
+            if (age >= 18)
+                return true;
+            else
+                return false;
+        }
+        function invalidAgeForVote(age) {
+            console.log(age)
+            if (age < 18)
+                return true;
+            else
+                return false;
+        }
+        var resultArray = ageArray.map(validAgeForVote);
+        print(resultArray) //2
+        var resultArray = ageArray.filter(validAgeForVote);
+        print(resultArray) //3
+        var resultArray = ageArray.filter(invalidAgeForVote);
+        print(resultArray) //4 
+        print("---------------");
+        var numArray = [1, 2, 3, 4, 5];
+        print(numArray);
+        function findEven(num) {
+            if (num % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+        var evenArray = numArray.map(findEven);
+        print(evenArray)
+        var evenArray = numArray.filter(findEven);
+        print(evenArray)
+        print("---------------");
+        function findOdd(num) {
+            if (num % 2 != 0)
+                return true;
+            else
+                return false;
+        }
+        var oddArray = numArray.map(findOdd);
+        print(oddArray)
+        var oddArray = numArray.filter(findOdd);
+        print(oddArray)
+        print("-----------------------------------");
+        var evenArray = numArray.filter(x => x % 2 == 0);
+        print(evenArray)
+        var oddArray = numArray.filter(x => x % 2 != 0);
+        print(oddArray)
+        print("Done");
+    </script>
+</body>
+
+</html>

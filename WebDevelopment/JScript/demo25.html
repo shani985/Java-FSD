@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: If statement</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"> </div>
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+
+        myprint("<u>break and continue  </u> ")
+        var i=1;
+        while(i<=5){
+            myprint(i);
+            if(i==3)
+            break;
+        myprint("inside the loop");
+            i++;
+        }
+        var i=1;
+           for(var i=1;i,i<=5;i++){
+        myprint(i);
+        if(i==3)
+        continue;
+    myprint("inside the loop")
+       }
+       
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function </title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border: 2px solid red;
+            border-radius: 20px;
+            width: 500px;
+            font-size: 25px;
+            background-color: goldenrod;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+
+    <script>
+        function myprint(data) {
+            var mydiv = document.getElementById("mydiv")
+            mydiv.innerHTML = mydiv.innerHTML + data + "<br/>";
+        }
+        function show() {
+            var x = 20;
+            myprint(x)
+            myprint("hello guys")
+            console.log("i am show()");
+            //retuen undefine
+        }
+        show();
+        // myprint(x) error this line
+
+        var res = show();
+        myprint(res);
+        function sum(a, b) {
+            myprint(" a type of " +typeof(a))
+            myprint(" b type of " +typeof(b))
+            var sum = a + b;
+            return sum;
+        }
+        var res = sum(10, 83)
+        myprint(res);
+        var res2 = sum("10", "37")
+        myprint(res2);
+    </script>
+</body>
+
+</html>

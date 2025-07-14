@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Exploring - Date Object - 2</title>
+ <style>
+ div {
+ height: 100px;
+ width: 300px;
+ background-color: bisque;
+ font-size: 50px;
+ text-align: center;
+ padding-top: 25px;
+ }
+ span {
+ font-size: 25px;
+ }
+ </style>
+</head> 
+<body onload="formatTime();">
+ <div id="mydata-div"> </div>
+ <script>
+ function formatTime() {
+ var cd = new Date();
+ var hh = cd.getHours();
+ var mm = cd.getMinutes();
+ var ss = cd.getSeconds();
+ var dStr = hh + ":" + mm + ":" + ss;
+
+ document.getElementById("mydata-div").innerHTML = dStr;
+ setTimeout("formatTime()", 1000);
+ }
+ </script>
+</body>
+</html> 

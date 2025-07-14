@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Document Object</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h1> Hello Guys</h1>");
+        function show() {
+            console.log("Button Clicked");
+            var fn = document.getElementById("fname").value;
+            console.log("fname : " + fn);
+            var em1 = document.getElementById("email1").value;
+            console.log("email 1 : " + em1);
+            var em2 = document.getElementById("email2").value;
+            console.log("email 2 : " + em2);
+            var ph = document.getElementById("phone").value;
+            console.log("phone : " + ph);
+            var fn = document.myform.fname.value;
+            var em1 = document.myform.email[0].value;
+            var em2 = document.myform.email[1].value;
+            var ph = document.myform.phone.value;
+            console.log("fname : " + fn);
+            console.log("email 1: " + em1);
+            console.log("email 2 : " + em2);
+            console.log("phone : " + ph);
+        }
+    </script>
+    <form name="myform">
+        <table>
+            <tr>
+                <td> Full Name</td>
+                <td> <input type="text" id="fname" name="fname" /> </td>
+            </tr>
+            <tr>
+                <td> First Email </td>
+                <td> <input type="text" id="email1" name="email" /> </td>
+            </tr>
+            <tr>
+                <td> Second Email </td>
+                <td> <input type="text" id="email2" name="email" /> </td>
+            </tr>
+            <tr>
+                <td> Phone </td>
+                <td> <input type="text" id="phone" name="phone" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="Click Here" onclick="show();" /> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

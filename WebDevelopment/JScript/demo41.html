@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Custom Objects - 2 </title>
+ <style>
+ div{
+ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ height:600px;
+ width:500px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>"
+ }
+ print("<u>Custom Objects - 2 </u> ")
+
+ var cust={
+ cid:101,
+ cname:"Sri",
+ phone:12345,
+ active:true,
+ emails:["sri@jlc","vas@cc"],
+ address:{
+ city:"bangalore",
+ state:"KA" 
+ },
+ isCustomerActive:function(){
+ return this.active;
+ },
+ getCity:function(){
+ return this.address.city;
+ },
+ getPhone:function(){
+ return this.phone;
+ }
+ }
+
+ console.log(cust);
+ print(typeof cust);
+ print("Way to access Object properties");
+ print(cust.cid);
+ print(cust.cname);
+ print(cust.phone);
+ print(cust.active);
+ print(cust.emails[0]);
+ print(cust.emails[1]);
+ print(cust.address.city);
+ print(cust.address.state);
+ print("Way to call Object functions");
+
+ var x=cust.isCustomerActive();
+ print(x);
+ var city=cust.getCity();
+ print(city);
+ var ph=cust.getPhone();
+ print(ph);
+ print("Done");
+ </script>
+</body>
+</html>

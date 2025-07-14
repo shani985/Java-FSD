@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JS : Custom Objects - 1 </title>
+ <style>
+ div{
+ margin: 50px;
+ border:2px solid red;
+ border-radius: 10px;
+ height:600px;
+ width:500px;
+ font-size:25px;
+ background-color: goldenrod;
+ padding-left: 20px;
+ }
+ </style>
+ </head>
+<body>
+ <div id="my-data-div"> </div>
+ <script>
+ function print(data) {
+ var mydiv=document.getElementById("my-data-div");
+ mydiv.innerHTML=mydiv.innerHTML+data+"</br>" 
+ }
+  print("<u>- Custom Objects - 1</u> ")
+
+ var cust = {
+ cid:101,
+ cname:"Sri",
+ email:"sri@cc",
+ phone:12345
+ }
+ console.log(cust);
+ print(typeof cust);
+ print("Way to access Object properties");
+ print(cust.cid);
+ print(cust.cname);
+ print(cust.email);
+ print(cust.phone);
+ print("Another Way to access Object properties");
+ print(cust["cid"]);
+ print(cust["cname"]);
+ print(cust["email"]);
+ print(cust["phone"]);
+ print("Updating Object properties");
+ cust.cname="Srinivas";
+ cust.phone=99999;
+
+ print("Object properties After Update");
+ print(cust.cid);
+ print(cust.cname);
+ print(cust.email);
+ print(cust.phone);
+ console.log(cust);
+ print("Done");
+ </script>
+</body>
+</html> 

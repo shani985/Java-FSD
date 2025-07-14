@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            margin: 50px;
+            border-radius: 2px;
+            border: 3px solid greenyellow;
+            padding: 50px;
+            text-align: center;
+            width: 500px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <script>
+        function print(data) {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.innerHTML = mydiv.innerHTML + data + "</br>"
+
+        }
+        print("<u>Explore- array object -1<u>")
+        var arr = [10, 12, 3, 456, 7, 65, 4, 78, 23, 45]
+        print(arr)
+        print(arr.length)
+        var first = arr[0];
+        var last = arr[arr.length - 1];
+        print(first);
+        print(last);
+        print("-------------------------")
+        print(arr)
+        var x = arr.push("hello");
+        print("X=" + x);
+        print(arr);
+        var Y = arr.push("99", "hello");
+        print("Y=" + Y)
+        print(arr)
+        var x = arr.pop();
+        print("x = "+x);
+        print(arr);
+        var x = arr.pop();
+        print(x);
+        print(arr);
+        print("-----------------------")
+        print("Done")
+           
+
+
+    </script>
+</body>
+
+</html>

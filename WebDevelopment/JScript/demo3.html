@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myhello,#myhai,#btn{
+            border:5px solid red;
+            border-radius: 60px;
+            font-size: 30px;
+            width:50%;
+            margin:50px;
+            padding: 20px;
+            background-color: green;    
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myhello">hello guy's </h1>
+    <div id="myhai">hai guys</div>
+    <input  id ="btn"type="button" value="Change Text" onclick="ChangeText();">
+    <script>
+        function ChangeText(){
+            var hello = document.getElementById("myhello");
+            console.log(hello.innerHTML);
+            hello.innerHTML="welcome to courseCube";
+            console.log(hello.innerHTML);
+            
+            var myhai=document.getElementById("myhai");
+            console.log(myhai.innerHTML);
+            myhai.innerHTML=""+"welcom to hai guy's";
+            console.log(myhai.innerHTML)
+        }
+    </script>
+</body>
+</html
