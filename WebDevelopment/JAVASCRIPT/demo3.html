@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        div,
+        input {
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 3px solid black;
+            margin: 50px;
+            border-radius: 15px;
+            padding: 50px;
+            height: 50px;
+            width: 500px;
+            text-align: center;
+            background-color: teal;
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hello">hello guys </h1>
+    <div id="hai">hai Guys</div>
+    <input type="button" value="Change text" onclick="changeText();">
+    <script>
+        function changeText() {
+            var myhello = document.getElementById("hello");
+            console.log(myhello.innerHTML);
+            myhello.innerHTML = "welcome to cousecube"
+            console.log(myhello.innerHTML);
+
+            var myhai = document.getElementById("hai");
+        console.log(myhai.innerHTML);
+        myhai.innerHTML = myhai.innerHTML + "  welcome to hai media"
+        console.log(myhai.innerHTML); 
+        }
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+                                my first table created
+Systex 
+create table <tablename>(
+<columnName1><datatype><size>[constraint],
+<columnName2><datatype><size>[constraint],
+<columnName3><datatype><size>[constraint]
+);
+
+
+===================================
+create table
+===================================
+
+create table  student(
+sid int(3)primary key,
+sname char(15),
+email char(15),
+phone long,
+city char(15),
+course char(15),
+bal double);
+
+===============================
+Insert records
+===============================
+insert into student values(101,'shani','shani27325@',476363,'blore','Java FSD',9000);
+insert into student values( 104,'rajat','rajat2524@',7646373,'delhi','python FSD',11000);
+insert into student(sid,sname,city,course)values(105,'amit','hydrabaad','mernstack');
+insert into student(email,course,sid,sname,city)values('nikh1232@','react developer','nikhe','channai');
+
+================================
+update records
+================================
+update student set course='python FSD' where course='Java FSD';
+update student set bal=0 where sid>=105;
+update student set bal=7000;
+update student set sname='zuber',email='zuber1452@',course='python',bal=4500;
+
+
+===================================
+delete records
+==================================
+delete from student where sid=101;
+delect from 
+student where bal =7000;
+delete from student ; 

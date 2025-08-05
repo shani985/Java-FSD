@@ -1,0 +1,53 @@
+Transaction management(most IMP)
+--------------------------------------------------
+# Transaction is set of Database Operations Performing as Atomic Unit. 
+# When all the Operations in Transaction are success then Transaction is Success and 
+it has to commited. 
+# When anyone Operation in Transaction is failed then Transaction is failed and it has 
+to rolled back. 
+#  All DB vendors have to provide the facility of transaction management. 
+Ex: 
+Begin Tx 
+Op1: Insert 
+Op2: Update 
+Op3: Update 
+Op4: Insert 
+Op5: Update
+commit Tx/rollback Ty
+
+use case 1: Found transfer
+-------------------------------------
+Auto commited
+ =>auto commit is enable by default in SQL
+=> MYSQL engine isssue the commit automatically at the end of every DB operation
+=> when you  are implement Txs you hava to disable Auto commit
+select @@autocommit;
+a) see the current status of autocommit
+select @@autocommit;
+b) disable  autocommit
+set autocommit=0;
+c) see the current status of autocommit
+select @@autocommit;
+------------------------------------------------------
+select * from myaccounts;
+ update myaccounts set bal=50000 where accon=999;
+select * from myaccounts;
+rollback
+insert into myaccount values(102,123,'SA','B11',15000);
+update myaccounts set bal=5000 where accon=555;
+select * from myaccounts;
+rollback;/commit
+-------------------------------------------------------------------------------------------------
+ To manage the transaction you need to use following keywords: 
+1 autocommit 
+2 commit 
+3 rollback 
+4 savepoint 
+-------------------------------------------------------------------------------------------------------
+
+2) commit: 
+=> The Query will be committed or saved and can't be rolled back. 
+3)rollback: 
+=>Uncommitted or unsaved query will be rolled back. (Cancelled) 
+4) savepoint: 
+=> Marking from where the uncommitted or unsaved query will be rolled back. 

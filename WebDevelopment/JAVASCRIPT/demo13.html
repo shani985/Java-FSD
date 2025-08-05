@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>JS : Operators - Part 3</title> 
+    <style> 
+     #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+    </style> 
+</head> 
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+ 
+      myprint("<u>4) Logical Operators </u> :") 
+         
+
+      myprint(" true && true => "+ (true && true)); 
+      myprint(" true && false => "+ (true && false)); 
+      myprint(" false && true => "+ (false && true)); 
+      myprint(" false && false => "+ (false && false)); 
+         
+      myprint(" true || true => "+ (true || true)); 
+      myprint(" true || false => "+ (true || false)); 
+      myprint(" false || true => "+ (false || true)); 
+      myprint(" false || false => "+ (false || false)); 
+         
+      myprint(" ! true => "+ ( !true )); 
+      myprint(" ! false => "+ ( !false )); 
+ </script> 
+</body> 
+</html> 

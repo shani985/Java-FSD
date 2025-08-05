@@ -1,0 +1,85 @@
+Generating value of primary key
+=========================================================
+create table students1( 
+sid int(3) Primary Key, 
+sname char(15) NOT NULL, 
+phone int(10) UNIQUE NOT NULL 
+); 
+===========================================================
+create table students2( 
+sid int(3) Primary Key AUTO_INCREMENT, 
+sname char(15) NOT NULL, 
+phone int(10) UNIQUE NOT NULL 
+); 
+==========================================================
+2) Insert the following Records 
+insert into students1 values(101,'sri',123); //OK 
+insert into students1 values('sri',123); // Syntax Error 
+insert into students1(sname,phone) values('sri',123); //Voilating P.K Contraint 
+insert into students2(sname,phone) values('sri',123); //OK 
+insert into students2(sname,phone) values('vas',321); //OK 
+insert into students2(sname,phone) values('sd',555); //OK 
+========================================================================
+Practice Lab - 13 
+========================================================================
+
+Step 1: Create the following table 
+
+create table students( 
+sid int(3) Primary Key AUTO_INCREMENT, 
+sname char(15) NOT NULL, 
+phone int(10) UNIQUE NOT NULL 
+) AUTO_INCREMENT=101 ; 
+
+=====================================================================
+2) Insert the following Records 
+====================================================================
+insert into students(sname,phone) values('sri',123); 
+insert into students(sname,phone) values('vas',321); 
+insert into students(sname,phone) values('sd',555);
+=========================================================================
+ 
+Indexes
+=======================================================================
+ Db index  helps to retrive the records very fastly
+
+=============================================================================
+create table students( 
+sid int(3) Primary Key AUTO_INCREMENT, 
+sname char(15) NOT NULL, 
+phone int(10) UNIQUE NOT NULL 
+) AUTO_INCREMENT=101 ; 
+
+
+insert into students(sname,phone) values('sri',123); 
+insert into students(sname,phone) values('vas',321); 
+insert into students(sname,phone) values('ds',999); 
+insert into students(sname,phone) values('aa',111); 
+insert into students(sname,phone) values('bb',555); 
+insert into students(sname,phone) values('cc',333); 
+insert into students(sname,phone) values('dd',222); 
+insert into students(sname,phone) values('ee',444); 
+insert into students(sname,phone) values('ff',777); 
+insert into students(sname,phone) values('gg',888); 
+ -----------------------------------------------------------------------------------------------------
+3) Select the Records as follows 
+select * from students where phone=777; 
+select * from students where sname='dd'; 
+
+
+*) SQL Engine search the student sequencally because No indexes created as of now for phone 
+and sname columns. 
+
+4) Create the Index as follows 
+syntax 
+create index <index_Name>on student (col_name);
+create index phone_index on students(phone); 
+create index sname_index on students(sname); 
+
+
+5) Select the Records as follows 
+select * from students where phone=777; 
+select * from students where sname='dd'; 
+
+*)SQL Engine search the student very fastly because indexes created now for phone and 
+sname columns.

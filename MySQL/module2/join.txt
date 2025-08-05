@@ -1,0 +1,326 @@
+join
+       join is  used to fatch the data from 2 and more table
+types of join
+------------------
+1)Inner join
+2)outer join
+       1) left Outer join
+       2)right outer join
+        3)Full outer join
+3) Self join
+4) cross join
+
+
+================================================================
+practice Lab3
+================================================================
+1) create the table as follow
+
+create table customer(
+cid int (3) primary key,
+cname char(15) NOT NULL,
+email char(15) NOT NULL UNIQUE,
+phone int (10)NOT NULL UNIQUE 
+);
+
+create table accounts(
+mycid int (3),
+accno int (5) primary key,
+atype char(2)NOT NULL,
+bal double NOT NULL
+);
+
+create table address(
+mycid int(3),
+addid int (3) primary key,
+street char(15) NOT NULL,
+city char(15) NOT NULL,
+state char(15)NOT NULL
+);
+
+desc customer;
+desc accounts;
+desc address;
+===================================================================
+2)insert  the following record
+===================================================================
+insert into customer values(101,'sri','sri@jlc',1111);
+insert into customer values(102,'vas','vas@jlc',2222);
+insert into customer values(103,'sd','sd@jlc',3333);
+insert into customer values(104,'ds','ds@jlc',4444);
+insert into customer values(105,'hello','hello@jlc',5555);
+insert into customer values(106,'hai','hai@jlc',6666);
+insert into customer values(107,'aaa','aaa@jlc',7777);
+insert into customer values(108,'bbb','bbb@jlc',8888);
+insert into customer values(109,'ccc','ccc@jlc',9999);
+
+
+
+insert into accounts  values(101,12345,'SA',5000);
+insert into accounts  values(102,12346,'SA',15000);
+insert into accounts  values(103,12347,'SA',25000);
+insert into accounts  values(107,12348,'SA',3000);
+insert into accounts  values(108,12349,'SA',13000);
+insert into accounts  values(109,12350,'SA',18000);
+
+
+insert into address  values(101,1,'BTM','blore','KA');
+insert into address  values(102,2,'MHA','blore','KA');
+insert into address  values(103,3,'P1','Pune','MH');
+insert into address  values(104,4,'D1','Delhi','Delhi');
+insert into address  values(109,5,'D2','Delhi','Delhi');
+insert into address  values(110,6,'P2','Pune','MH');
+insert into address  values(111,7,'H1','Hyd','TG');
+insert into address  values(112,8,'pp','Patna','BR');
+=================================================================
+3)play with query
+=================================================================
+1) Inner join: inner join is uesd to fatch the  matching record of both the table 
+=>inner join is also called the equal join or equai join
+=>  gives matching tables from the joined tables
+
+Q1
+Ans
+select * from customer ,accounts;
+or 
+select *
+ from customer cust ,accounts acc 
+where cust.cid=acc.mycid;
+or 
+select *
+from customer cust inner join accounts acc
+on cust.cid=acc.mycid;
+
+Q2
+Ans:
+select  cid,cname,phone,accno, bal
+ from customer cust ,accounts acc
+ where cust.cid=acc.mycid;
+or
+select  cid,cname,phone,accno, bal
+ from customer cust inner join accounts acc
+ on cust.cid=acc.mycid;
+Q3
+Ans:
+select * 
+from customer cust ,address addr 
+where cust.cid=addr.mycid;
+or
+select * 
+from customer cust inner join address addr 
+on cust.cid=addr.mycid;
+
+Q4
+Ans:
+select  cid,cname,phone,city,state
+ from customer cust ,address addr 
+where cust.cid=addr.mycid;
+or
+select cid,cname,phone,city,state
+from customer cust inner join address addr
+on cust.cid=addr.mycid;
+Q5
+Ans
+select *
+ from customer cust,accounts acc,address addr 
+where cust.cid=acc.mycid AND cust.cid=addr.mycid;
+or 
+select  * from customer cust inner join accounts acc
+on cust.cid=acc.mycid inner join address addr
+on cust.cid=addr.mycid;
+
+Q6
+Ans
+select  cid,cname,phone,accno,bal,city,state
+ from customer cust,accounts acc,address addr 
+where cust.cid=acc.mycid AND cust.cid=addr.mycid;
+or
+select  cid,cname,phone,accno,bal,city,state from customer cust inner join accounts acc
+on cust.cid=acc.mycid inner join address addr
+on cust.cid=addr.mycid;                          
+====================================================================
+left outer join:
+left outer join is gives the matching record from joined tables + reamaining record 
+of left side table                                                 
+===================================================================
+ Q1
+Ans
+select *
+from customer cust left join accounts acc
+on cust.cid=acc.mycid;                
+Q2
+Ans:
+select  cid,cname,phone,accno, bal
+from customer cust left join accounts acc
+on cust.cid=acc.mycid;  
+Q3
+Ans:
+select * 
+from customer cust left join address addr 
+on cust.cid=addr.mycid;
+Q4
+Ans:
+select cid,cname,phone,city,state
+from customer cust left join address addr
+on cust.cid=addr.mycid;
+Q5
+Ans
+select  * from customer cust left join accounts acc
+on cust.cid=acc.mycid left join address addr
+on cust.cid=addr.mycid;
+Q6 
+Ans:
+select  cid,cname,phone,accno,bal,city,state 
+from customer cust left join accounts acc
+on cust.cid=acc.mycid left join address addr
+on cust.cid=addr.mycid;        
+==================================================================
+Right join:
+right outer join is gives matching record  from the joined table + remaining record of right side table
+===================================================================
+ Q1
+Ans
+select *
+from customer cust right join accounts acc
+on cust.cid=acc.mycid;                
+Q2
+Ans:
+select  cid,cname,phone,accno, bal
+from customer cust right join accounts acc
+on cust.cid=acc.mycid;  
+Q3
+Ans:
+select * 
+from customer cust right join address addr 
+on cust.cid=addr.mycid;
+Q4
+Ans:
+select cid,cname,phone,city,state
+from customer cust right join address addr
+on cust.cid=addr.mycid;
+Q5
+Ans
+select  * from customer cust right join accounts acc
+on cust.cid=acc.mycid right join address addr
+on cust.cid=addr.mycid;
+Q6 
+Ans:
+select  cid,cname,phone,accno,bal,city,state 
+from customer cust left join accounts acc
+on cust.cid=acc.mycid left join address addr
+on cust.cid=addr.mycid;   
+==================================================================
+Full outer join 
+full outer join is  gives the matching record from the joined table +remaing 
+record left side table and right side table
+=================================================================
+Q1) Display customers personal and accounts info? 
+Ans: 
+select * from customer cust 
+left join accounts acc on cust.cid=acc.mycid 
+union 
+select * from customer cust 
+right join accounts acc on cust.cid=acc.mycid; 
+Q2) Display customers personal and address info 
+Ans: 
+select * from customer cust 
+left join address addr on cust.cid=addr.mycid 
+union 
+select * from customer cust 
+right join address addr on cust.cid=addr.mycid;
+Q3) Display customers personal , accounts and address info 
+Ans: 
+select * from customer cust 
+left join accounts acc on cust.cid=acc.mycid 
+left join address addr on cust.cid=addr.mycid 
+union 
+select * from customer cust 
+right join accounts acc on cust.cid=acc.mycid 
+right join address addr on cust.cid=addr.mycid;
+
+==================================================================
+ 
+Step 8: Joins with Extra Conditions - Questions 
+
+==================================================================
+
+
+Q1) Display customers personal and accounts info whose bal>=15000 
+Ans: 
+select * from customer cust 
+inner join accounts acc on cust.cid=acc.mycid and bal>=15000; 
+
+Q2) Display customers personal and address info who are staying in Blore 
+Ans: 
+select * from customer cust 
+inner join address addr on cust.cid=addr.mycid and city='Blore'; 
+
+Q3) Display customers personal and address info who are staying in Blore and Pune 
+Ans: 
+select * from customer cust 
+inner join address addr on cust.cid=addr.mycid and city in ('Blore','Pune'); 
+
+Q4) Display customers personal , accounts and address info who are staying in Blore 
+and Delhi 
+Ans: 
+select * from customer cust 
+inner join accounts acc on cust.cid=acc.mycid 
+inner join address addr on cust.cid=addr.mycid and city in ('Blore','Delhi');
+ 
+ 
+Q5) Display customers personal , accounts and address info whose bal>=15000 
+Ans: 
+select * from customer cust 
+inner join accounts acc on cust.cid=acc.mycid and bal>=15000 
+inner join address addr on cust.cid=addr.mycid; 
+
+Q6) Display customers personal , accounts and address info who are staying in Blore 
+and Delhi and whose bal>=15000 
+Ans: 
+select * from customer cust 
+inner join accounts acc on cust.cid=acc.mycid and bal>=15000 
+inner join address addr on cust.cid=addr.mycid and city in ('Blore','Delhi'); 
+
+
+======================================================================
+self join :
+=>Joining the table to itself is called as self join. 
+=>Self join is same as any other join, but in this join multiple instance of same table will 
+participate the join query.
+===================================================================
+create table myemployees( 
+empId int(3), 
+empName char(15), 
+mgrId int(3) 
+); 
+insert into myemployees values(101,'sri',103); 
+insert into myemployees values(102,'vas',103); 
+insert into myemployees values(103,'sd',NULL); 
+insert into myemployees values(104,'ds',101); 
+insert into myemployees values(105,'aaa',101); 
+insert into myemployees values(106,'bbb',102); 
+ 
+select emp.empName as "EMP Name", mgr.empName as "Manager Name" 
+from myemployees emp, myemployees mgr 
+where emp.mgrId = mgr.empId; 
+or
+select emp.empName as "EMP Name", mgr.empName as "Manager Name" 
+from myemployees emp 
+inner join myemployees mgr on emp.mgrId = mgr.empId;
+ or 
+select emp.empName as "EMP Name", mgr.empName as "Manager Name" 
+from myemployees emp 
+left join myemployees mgr on emp.mgrId = mgr.empId; 
+
+
+====================================================================
+cross join
+When you are not providing condition in join query then it will give cartiasian product of 
+joined table called as cross join. 
+===================================================================
+select cid,cname,accno,bal 
+from customer cust, accounts acc;
+
+              
+                                            
+           

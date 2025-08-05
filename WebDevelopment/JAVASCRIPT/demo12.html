@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>JS : Operators - Part 2</title> 
+<style> 
+#mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+</style> 
+</head> 
+<body> 
+<div id="mydiv">  </div> 
+<script> 
+function myprint(data){ 
+var mydiv= document.getElementById("mydiv"); 
+console.log(mydiv); 
+mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+} 
+myprint("<u>3) Relational Operators </u> :") 
+var a=10; 
+myprint(" a  =>"+ a); 
+myprint(" a > 5  =>"+ (a > 5)); 
+myprint(" a > 10  =>"+(a > 10)); 
+myprint(" a >= 10  =>"+ (a >= 10)); 
+myprint(" a < 20 =>"+ (a < 20)); 
+myprint(" a <10  =>"+ (a <10) ); 
+myprint(" a <=10  =>"+ (a <=10) ); 
+myprint(" a==10  =>"+ (a==10) ); 
+myprint(" a=='10'  =>"+ (a=="10") ); 
+myprint(" a==10.0  =>"+ (a==10.0)); 
+                                   
+myprint(" a===10  =>"+ (a===10) ); 
+myprint(" a==='10'  =>"+ (a==="10") ); 
+myprint(" a===10.0  =>"+ (a===10.0)); 
+ 
+myprint(" a!=10  =>"+ (a!=10) ); 
+myprint(" a!='10' =>"+ (a!="10") ); 
+myprint(" a!=10.0 =>"+  (a!=10.0)); 
+ 
+myprint(" a!==10  =>"+ (a!==10) ); 
+myprint(" a!=='10'  =>"+ (a!=="10") ); 
+myprint(" a!==10.0  =>"+ (a!==10.0)); 
+ 
+</script> 
+</body> 
+</html>

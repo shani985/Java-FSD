@@ -1,0 +1,185 @@
+Alter Table
+============
+Step 1: Create the following table 
+create table mycustomers ( 
+cid int(3) primary key, 
+cname char(15), 
+email char(15), 
+phone long, 
+city char(15) 
+); 
+2) Insert the following Records 
+insert into mycustomers values(101,'sri','sri@jlc',999,'Blore'); 
+insert into mycustomers values(102,'a','a@jlc',111,'Blore'); 
+insert into mycustomers values(103,'b','b@jlc',222,'Blore'); 
+insert into mycustomers values(104,'c','c@jlc',333,'Blore'); 
+insert into mycustomers values(105,'d','d@jlc',444,'Blore'); 
+insert into mycustomers values(106,'e','e@jlc',555,'Blore'); 
+
+Adding new column
+-----------------------------
+Systax:
+----------
+ALTER TABLE table_name
+ADD column_name data_type(size)
+AFTER column_name;
+EX
+ALTER TABLE mycustomers
+ADD status char(15)
+AFTER city;
+
+ALTER TABLE mycustomers
+ADD gender char(8)
+AFTER phone; 
+
+Drop column
+-----------------------------
+Systax:
+----------
+ALTER TABLE table_name
+DROP  COLUMN column_name ;
+
+EX
+ALTER TABLE mycustomers
+DROP  COLUMN gender;
+
+ALTER TABLE mycustomers
+DROP COLUMN status;
+
+
+3) modify the column
+----------------------------
+Sysntax:
+ALTER TABLE mycustomers
+MODIFY column_name data_type(size);
+
+EX
+
+ALTER TABLE mycustomers
+MODIFY city char(25); 
+
+ALTER TABLE mycustomers
+MODIFY phone int(10); 
+
+ALTER TABLE mycustomers
+MODIFY cid char(5); 
+
+4)Adding the primary key
+-----------------------------------
+Syntax: 
+ALTER TABLE table_name 
+ADD Primary Key(column1,column2); 
+Ex: 
+ALTER TABLE mycustomers 
+ADD Primary Key(phone); 
+
+ALTER TABLE mycustomers 
+ADD Primary Key(cid); 
+
+
+5) Drop the Primary Key 
+-------------------------------
+Syntax: 
+ALTER TABLE table_name 
+DROP Primary Key; 
+Ex: 
+ALTER TABLE mycustomers 
+DROP Primary Key;
+
+6) Adding Constraints*** 
+-------------------------------
+Syntax: 
+ALTER TABLE table_name 
+ADD CONSTRAINT constraint_name <yours constraints here>; 
+Ex: 
+ALTER TABLE mycustomers 
+ADD CONSTRAINT ck1 status char(15) NOT NULL; 
+
+7) Drop the Constraints*** 
+-----------------------------------
+Syntax: 
+ALTER TABLE table_name 
+DROP CONSTRAINT constraint_name; 
+Ex: 
+ALTER TABLE mycustomers 
+DROP CONSTRAINT ck1 ; 
+
+8) Renaming Column 
+-----------------------------
+Syntax: 
+ALTER TABLE table_name 
+RENAME TO new-table-name; 
+Ex: 
+ALTER TABLE hellocustomers 
+RENAME TO haicustomers; 
+
+
+
+===============================================================================
+Droping object
+-----------------------
+Database Objects 
+1) tables 
+2) Views 
+3) Indexes 
+
+
+1) Dropping Table 
+Syntax: 
+drop table table_name; 
+Ex: 
+drop table haicustomers; 
+
+
+2) Dropping View 
+Syntax: 
+drop view view_name; 
+Ex: 
+drop view support_view; 
+
+
+3) Dropping Index 
+Syntax: 
+drop index Index_name; 
+Ex: 
+drop index phone_index; 
+
+===============================================================
+Truncate the table
+---------------------------
+Q1 difference between truncate and delete
+
+delete from mycustomer
+=> delete all the records and makes the table empty
+=> delete operation can be rollback
+
+truncate from mycustomer
+=>drop the table and create the new table so you will have empty table only
+=>truncate operation can not be roll back
+
+==================================================
+spacial query
+===============
+
+
+Q1) diplay the records from mth row to nth now 
+
+select * from mycustomers limit 0,5; 
+select * from mycustomers limit 5,5; 
+select * from mycustomers limit 10,5; 
+
+Q) Display the Nth Row 
+
+select * from mycustomers limit 6,1; 
+
+Q) Display the Top N Records 
+
+select * from mycustomers limit 5; 
+
+
+
+
+
+
+
+

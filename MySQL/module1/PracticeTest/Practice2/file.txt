@@ -1,0 +1,144 @@
+===================================================================
+create table jlcstudent(
+sid int(3) primary key,
+sname char(15),
+city char(15),
+course char(15),
+feepaid double,
+feebal double,
+status char(10)
+);
+===================================================================
+insert into jlcstudent values(101,'sri','Blore','java',10000,10000,'Active');
+insert into jlcstudent values(102,'vas','Hyd','AWS',5000,15000,'Active');
+insert into jlcstudent values(103,'sd','Delhi','java',12000,8000,'Active');
+insert into jlcstudent values(104,'ds','Blore','Python',8000,12000,'Active');
+insert into jlcstudent values(105,'aa','Pune','java',15000,5000,'InActive');
+insert into jlcstudent values(106,'bb','Blore','java',10000,10000,'InActive');
+insert into jlcstudent values(107,'cc','Delhi','Python',12000,8000,'InActive');
+insert into jlcstudent values(108,'dd','Blore','java',8000,12000,'Active');
+insert into jlcstudent values(109,'hello','Pune','python',5000,15000,'Active');
+insert into jlcstudent values(110,'hai','Delhi','java',15000,5000,'Active');
+insert into jlcstudent(sid,sname,course,feepaid,feebal)values(111,'abc','python',5000,15000); 
+insert int jlcstudent(sid,sname,course,feepaid,feebal)values(112,'xyz','java',5000,15000);
+===================================================================
+Play with Queries
+===================================================================
+Q1
+Ans:
+select * from jlcstudent;
+Q2
+Ans :
+select count(sid) from  jlcstudent;
+or
+select count(sid)  as 'total student' from  jlcstudent;
+Q3
+Ans :
+select count(sid)  from student where course IN('java');
+select count(*)  from student where course ='java';
+Q4
+Ans:
+select count(*) from jlcstudent
+where course='java' AND city='blore'; 
+Q5
+Ans:
+select count(*) from jlcstudent
+where city IS NOT NULL;
+or 
+select * from jlcstudent
+where city IS NOT NULL;
+Q6 
+Ans:
+select count(course) as"total course" from jlcstudent ;
+select count(DISTINCT course) as"total course" from jlcstudent ;
+Q7 
+Ans:
+select count(city) as"total city" from jlcstudent ;
+select count(DISTINCT city) as"total city" from jlcstudent ;
+Q8
+Ans:
+select sum(feespaid)from jlcstudent;
+select sum(feepaid)as 'total feespaid'from jlcstudent;
+Q9
+Ans:
+select sum(feepaid)from jlcstudent where course='java';
+Q10
+Ans:
+select sum(feepaid)from jlcstudent where course='java'AND city='blore;
+Q11
+Ans:
+select min(feepaid)from jlcstudent;
+Q12
+Ans:
+select max(feepaid)from jlcstudent;
+Q13
+Ans:
+select min(feebal)from jlcstudent;
+
+Q14
+Ans:
+select max(feebal)from jlcstudent;
+Q15
+Ans:
+select avg(feepaid)from jlcstudent;
+or
+select sum(feepaid)/count(feepaid)from jlcstudent;
+Q16
+Ans:
+select max(sid)+1 from jlcstudent;
+==================================================================
+Group by clause
+==================================================================
+Q17
+Ans
+select  sum(feepaid)from jlcstudent where course='java';
+select  sum(feepaid)from jlcstudent where course='python';
+select  sum(feepaid)from jlcstudent where course='AWS';
+or
+select course ,sum(feepaid)from jlcstudent group by course;
+
+Q18
+Ans:
+select course ,sum(feepaid)from jlcstudent
+ group by course having course IN('java','python');
+Q19
+Ans:
+select course,count(course) from jlcstudent
+ group by course; 
+Q20
+Ans:
+select course ,count(course)from jlcstudent
+ group by course having course IN('java','python');
+Q21
+Ans:
+select city,sum(feebal) from jlcstudent
+ group by city;
+Q22
+Ans:
+select city,sum(feebal) from jlcstudent
+ group by city having city IN('blore','Delhi');
+Q23
+Ans:
+select city,count(*) from jlcstudent
+ group by city;
+Q24
+Ans:
+select city,count(*) from jlcstudent
+ group by city having city IN('blore','Delhi');
+Q25
+Ans:
+select  status,count(status) from jlcstudent
+group by status;
+Q26
+Ans:
+select  city,sum(feebal),status from jlcstudent
+group by city having city IN ('blore','Delhi') AND status='Active';
+Q27
+Ans:
+select  city,sum(feebal) from jlcstudent
+group by city having city IN ('blore','Delhi');
+ Q28
+Ans:
+select course,sum(feepaid)from jlcstudent
+group by course
+order by course DESC;

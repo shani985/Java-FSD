@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 3px solid black;
+            margin: 50px;
+            border-radius: 15px;
+            padding: 50px;
+            background-color: teal; color:blue
+        }
+    </style>
+</head>
+<body bgcolor="skyblue" >
+    <h1 >Welcome to JLC</h1>
+    <p id="mypara-1" >JS Training Center</p>
+    <p id="mypara-2">Angular Training Center</p>
+    <p id="mypara-3" >React Training Center</p>
+    
+    <script>
+      //  window.alert("Hello Shani Mourya");
+
+       var mypara1= document.getElementById('mypara-1');
+       mypara1.addEventListener("click", function(){
+            window.alert("You clicked on JS Training");
+            window.console.log("You clicked on JS Training");
+        }
+);
+var mypara2= document.getElementById('mypara-2');
+       mypara2.addEventListener("mouseover",function (){
+            alert("mouseover");
+            console.log("Mouseover on Angular Training");
+        }
+);
+var mypara3= document.getElementById('mypara-3');
+       mypara3.addEventListener("dblclick",function (){
+            alert("You double-clicked on React Training");
+           console.log("You double-clicked on React Training");
+        }
+        
+);
+
+
+
+
+        // function show1(){
+        //     window.alert("You clicked on JS Training");
+        //     window.console.log("You clicked on JS Training");
+        // }
+
+        // function show2(){
+        //     alert("You double-clicked on React Training");
+        //     console.log("You double-clicked on React Training");
+        // }
+        
+        // function show3(){
+        //     alert("mouseover");
+        //     console.log("Mouseover on Angular Training");
+        // }
+
+        // function show4(){
+        //     alert("mouseout");
+        //     console.log("Mouseout on Angular Training");
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+SQL Function
+=======================
+1)Arithmetic Functions
+2)String Functions
+3)Data Functions
+4) Conversion Functions
+5) Aggregate Functions
+
+1)Arithmetic Functions
+====================
+sqrt()
+power()/pow()
+mod()
+ceil()
+floor()
+round()
+abs()
+
+select sqrt(25);
+select power(25,2);
+select power(25,.5);
+select mod(10,2);
+select mod(10,3);
+select abs(9);
+select abs(-9);
+select ceil(5);
+select ceil(5.2);
+select ceil(5.9);
+select floor(5);
+select floor(5.2);
+select floor(5.9);
+select round(5);
+select round(5.2);
+select round(5.9);
+===============================
+2)String Functions
+================================
+length()
+trim()
+rtrim()
+ltrim() 
+rpad() 
+lpad() 
+substr()/substring() 
+lower() 
+lcase() 
+upper() 
+ucase() 
+ascii() 
+char() 
+concat() 
+replace() 
+
+select length('shani mourya');
+select length('  shani mourya  '); 
+select trim('  shani mourya  '); 
+select length(trim('  shani mourya  ')); 
+select length(ltrim('  shani mourya  '));
+select length(rtrim('  shani mourya  ')); 
+select rpad('jlc',5,'*');
+select rpad('jlc',6,'*');
+select rpad('jlc',2,'*');
+select rpad('jlc',6,'*');
+select rpad('jlc',3,'*');
+
+select lpad('jlc',5,'*');
+select lpad('jlc',6,'*');
+select lpad('jlc',2,'*');
+select lpad('jlc',4,'*');
+select lpad('jlc',3,'*');
+============================
+select substr('shanimourya',4);
+select substr('shanimourya',3);
+select substr('shanimourya',4,7);
+select substr('shanimourya',4,6);
+select substr('shanimourya',4,9);
+=============================
+select lower('SriNiVas'); 
+select lcase('SriNiVas'); 
+select upper('SriNiVas'); 
+select ucase('SriNiVas'); 
+==============================
+select ascii('A'); 
+select ascii('a'); 
+select char(97); 
+select char(65); 
+===============================
+select concat('hello','guys'); 
+select length(concat('hello','guys')); 
+select substr(concat('hello','guys'),3,5); 
+select length(substr(concat('hello','guys'),3,5)); 
+select replace('helloguys','hello','JLC'); 
+select replace('helloguys','hello','JLC ');
+======================================
+3)Data Functions
+=======================================
+MySQL - YYYY-MM-DD => 2024-02-20
+sysdate() 
+now() 
+date() 
+time() 
+day() 
+month() 
+year()
+
+
+select sysdate(); 
+select now(); 
+select date(sysdate()); 
+select date(now()); 
+select time(sysdate()); 
+select time(now()); 
+select day(sysdate()); 
+select day(now()); 
+select month(sysdate()); 
+select month(now()); 
+select year(sysdate()); 
+select year(now());
+=================================
+DateFormat
+=================================
+
+
+FORMAT SPECIFIERS(MYSQL) 
+%a : Thu
+%b : Sep 
+%c : Month in digit 
+%d : Date (00 - 31) 
+%D : Date with suffix st,th,nd,rd 
+%e : Date (1 - 31) 
+%r : Time in 12 Hours 
+%T : Time in 24 Hour 
+%W : Thursday 
+%Y : YYYY 
+%y : YY 
+%M : September 
+%m : Month in two digit 
+
+a) select date_format(sysdate(),'%D %M %Y'); 
+output : 13th February 2025
+b) select date_format(sysdate(),'%d-%m-%y'); 
+output: 13-02-25
+c) select date_format(sysdate(),'%d-%m-%Y'); 
+output: 13-02-202
+d) select date_format(sysdate(),'%W %d-%m-%Y'); 
+output :  Thursday 13-02-2025
+e) select date_format(sysdate(),'%a %d-%m-%Y'); 
+output: Thu 13-02-2025
+f) select date_format(sysdate(),'%d-%b-%Y');
+output:  13-Feb-2025 
+g) select time_format(sysdate(),'%r'); 
+output:  09:18:21 PM
+h) select time_format(sysdate(),'%T');
+output:  21:18:55
+==========================================
+4) Conversion Functions
+===========================================
+str_to_date() 
+select str_to_date('August 10 2024','%D-%M-%Y'); 
+create table hello( 
+id int, 
+hello date 
+); 
+insert into hello values(101, str_to_date('August 10 2024','%D-%M-%Y') ); 

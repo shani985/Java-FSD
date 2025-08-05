@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>JS : Operators - Part 6</title> 
+    <style> 
+
+     #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+    </style> 
+</head> 
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+   myprint("<u>7) Bitwise Operators    </u> ") 
+        var a=19; 
+ 
+        myprint("a<<1   :  "+ (a<<1)); 
+        myprint("a<<2   :  "+ (a<<2)); 
+        myprint("a>>1   :  "+ (a>>1)); 
+        myprint("a>>2   :  "+ (a>>2)); 
+         
+        var x=15; 
+        var y=17; 
+        myprint("x & y  :  "+ (x & y)); 
+        myprint("x | y  :  "+ (x | y)); 
+        myprint("x ^ y  :  "+ (x ^ y)); 
+        myprint("~x   :  "+ ( ~x )); 
+        myprint("~y   :  "+ ( ~y )); 
+ 
+        // myprint("0101<<1   :  "+ (0101<<1)); 
+        // myprint("0101>>1   :  "+ (0101>>1)); 
+        // myprint("0101>>2   :  "+ (0101>>2)); 
+ 
+ </script> 
+</body> 
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 3px solid black;
+            margin: 50px;
+            border-radius: 15px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to JLC</h1>
+    <p onclick="show1();">JS Training Center</p>
+    <p onmouseover="show3();" onmouseout="show4();">Angular Training Center</p>
+    <p ondblclick="show2();">React Training Center</p>
+    
+    <script>
+        window.alert("Hello Shani Mourya");
+
+        function show1(){
+            window.alert("You clicked on JS Training");
+            window.console.log("You clicked on JS Training");
+        }
+
+        function show2(){
+            alert("You double-clicked on React Training");
+            console.log("You double-clicked on React Training");
+        }
+        
+        function show3(){
+            alert("mouseover");
+            console.log("Mouseover on Angular Training");
+        }
+
+        function show4(){
+            alert("mouseout");
+            console.log("Mouseout on Angular Training");
+        }
+    </script>
+</body>
+</html>

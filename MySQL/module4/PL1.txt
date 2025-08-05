@@ -1,0 +1,499 @@
+delimiter ##
+create procedure mydisplay1()
+begin
+declare a int;
+declare b int;
+declare total int;
+set a=10;
+set b=20;
+set total=a*b;
+select total as "multiplication";
+end;
+##
+delimiter ;
+
+call procedure as follows
+----------------------------------
+call mydisplay1();
+------------------------------------
+delimiter ## 
+create procedure findSum(a int,b int) 
+begin 
+declare total int; 
+set total = a+b+10; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ;
+
+call procedure as follows
+----------------------------------
+call findSum(100,300);
+call findSum(200,400);
+------------------------------- 
+type of parameter-:-
+1) IN parameter
+2)OUT parameter
+3)IN OUT parameter
+
+
+1)In parameter-:-
+=>In parameter takes the value from the coller to the procedure
+=> by Default,parameter In only
+
+delimiter ## 
+create procedure p1(IN a int,IN b int, c int) 
+begin 
+declare total int; 
+set total = a+b+c; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ;
+
+call the procedure as follows
+---------------------------------------
+call p1(35,46,68);
+call p1(35,46,08);
+
+OUT parameter
+---------------------
+
+delimiter ##
+create procedure q1(IN a int ,IN b int,OUT total int ,OUT diff int)
+begin 
+set total=a+b;
+set diff=a-b;
+select total;
+select diff;
+end;
+##
+delimiter ;
+
+call procedure as follows
+-----------------------------------
+select @mytotal; 
+select @mydiff; 
+call q1(37,47,@mytotal,@mydiff);
+select @mytotal; 
+select @mydiff; 
+
+---------------------------------------------------
+delimiter ##
+create procedure q2(IN a int ,IN b int,OUT total int ,OUT diff int)
+begin 
+set total=a+b;
+set diff=a-b;
+end;
+##
+delimiter ;
+------------------------------------
+select @mytotal; 
+select @mydiff; 
+call q2(37,47,@mytotal,@mydiff);
+select @mytotal; 
+select @mydiff; 
+-------------------------------------------
+3)IN OUT PARAMETER:
+--------------------------------
+delimiter ## 
+create procedure p4(IN a int,INOUT b int) 
+begin 
+set b = a+b; 
+end; 
+## 
+delimiter ;
+-------------------------
+select @b; 
+set @b=20; 
+select @b; 
+call p4(10,@b); 
+select @b; 
+-----------------------------------------------------
+
+conditional Statement
+----------------------------------
+if statement
+Syntax:
+-----------
+if(conditional)Then
+......
+.....
+.....
+end if;
+2) if-else statement 
+Syntex:
+if(conditional)then
+......
+.....
+.....
+else
+......
+.....
+......
+end if;
+---------------------------------
+3)if-else ladder
+
+if(conditional)then
+......
+.....
+.....
+elseif(condition)then
+......
+.....
+......
+end if;
+
+
+-----------------------------------
+delimiter ##
+create procedure findMax(IN a int ,IN b int)
+begin
+declare c int ;
+if(a>b)then
+set c=a;
+else
+set c=b;
+end if;
+select  c as "Max";
+end;
+##
+delimiter ;
+
+-----------------------------
+call findMax(34,67);
+----------------------------
+delimiter ##
+create procedure findMax2(IN a int ,IN b int ,IN d int )
+begin
+declare c int ;
+if(a>b and a>d)then
+set c=a;
+elseif(b>d)then
+set c=b;
+else
+set c=d;
+end if;
+select  c as "Max";
+end;
+##
+delimiter ;
+--------------------------------------------------------------
+looping-:-
+------------
+1) while loop
+2) repeat-until statement
+-----------------------------------
+1) while loop
+
+Syntax:
+while(condition) do
+statement1
+statement2
+end while;
+
+delimiter ## 
+create procedure printNums(num int) 
+begin 
+declare i int; 
+set i=1; 
+while(i<=num)do 
+select i; 
+set i= i+1; 
+end while; 
+end; 
+## 
+delimiter ; 
+Call the Procedure as follows 
+call printNums(6); 
+-----------
+ 2) repeat until-statement
+Syntax: 
+ Repeat 
+St1 
+ St2 
+ … 
+Until Condition 
+end Repeat; 
+--------------------------------
+
+Example 11 : Print the Numbers from 1 to given number 
+delimiter $$ 
+create procedure displayNums1(num int) 
+begin 
+declare i int; 
+set i=1; 
+Repeat 
+select i; 
+set i= i+1; 
+Until i>5 
+end Repeat; 
+end; 
+$$ 
+delimiter ; 
+Call the Procedure as follows 
+call displayNums1(6);        
+---------------------------------
+Example 9 : Find the Sum of the Numbers from 1 to given number 
+delimiter ## 
+create procedure findTotal(num int) 
+begin 
+declare i int; 
+declare total int; 
+set i=1; 
+set total=0; 
+while(i<=num)do 
+set total = total + i; 
+set i= i+1; 
+end while; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ; 
+Call the Procedure as follows 
+call findTotal(10);              
+----------------------------
+Example 10 : Find the Sum of Even Numbers from 1 to given number 
+delimiter ## 
+create procedure findEvenTotal(num int) 
+begin 
+declare i int; 
+declare total int; 
+set i=1; 
+set total=0; 
+while(i<=num)do 
+if(i mod 2=0)then 
+set total = total + i; 
+end if; 
+set i= i+1; 
+end while; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ; 
+Call the Procedure as follow                
+call findEvenTotal(10);
+--------------------------------------    
+Example 12 : Find the Sum of the Numbers from 1 to given number 
+delimiter ## 
+create procedure findTotal3(num int) 
+begin 
+declare i int; 
+declare total int; 
+set i=1; 
+set total=0; 
+Repeat 
+set total = total + i; 
+set i= i+1; 
+Until i>num 
+end Repeat; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ; 
+-------------------
+Call the Procedure as follows 
+call findTotal3(5);                    
+-----------------------------------------------------
+Example 13 : Find the Sum of Even Numbers from 1 to given number
+delimiter ## 
+create procedure findEvenTotal3(num int) 
+begin 
+declare i int; 
+declare total int; 
+set i=1; 
+set total=0; 
+Repeat 
+set total = total + i; 
+set i= i+1; 
+Until i>num 
+end Repeat; 
+select total as "Sum"; 
+end; 
+## 
+delimiter ;   -
+call findEvenTotal(10); 
+------------------------------------------------
+ Real-World Stored Procedures-:-
+1
+1) Setup the Database 
+create table jlcstudents( 
+sid int primary key, 
+sname char(10) NOT NULL, 
+email char(10) NOT NULL, 
+totalfee double DEFAULT 20000, 
+feepaid double NOT NULL, 
+m1 int, 
+m2 int, 
+m3 int, 
+total int, 
+average double, 
+grade char(5) 
+); 
+select * from jlcstudents; 
+insert into jlcstudents(sid,sname,email,feepaid,m1,m2,m3) 
+values(101,'Sri','Sri@jlc',5000,60,40,90); 
+insert into jlcstudents(sid,sname,email,feepaid,m1,m2,m3) 
+values(102,'sd','sd@jlc',15000,80,80,80); 
+insert into jlcstudents(sid,sname,email,feepaid,m1,m2,m3) 
+values(103,'ds','ds@jlc',10000,20,30,40); 
+insert into jlcstudents(sid,sname,email,feepaid,m1,m2,m3) 
+values(104,'vas','vas@jlc',2000,95,96,97); 
+select * from jlcstudents; 
+
+--------------------------------------------------------------------------------------------
+Example 14: Write the SP to get the Fee Balance of given Student.
+------------------------------------------------------------------------------------------------------
+
+delimiter ## 
+create procedure getBalance(IN mysid int, OUT mybal double) 
+begin 
+declare mytotalfee double; 
+declare myfeepaid double; 
+select totalfee, feepaid into mytotalfee,myfeepaid from jlcstudents where sid=mysid; 
+set mybal = mytotalfee - myfeepaid; 
+end; 
+## 
+delimiter ; 
+Call the Procedure as follows 
+select @mybal; 
+call getBalance(101,@mybal); 
+select @mybal; 
+call getBalance(102,@mybal); 
+select @mybal; 
+---------------------------------------------
+Example 15: Write the SP to calculate and Update the Results of given student
+----------------------------------------------------------
+delimiter ##
+create procedure findGrade(IN mysid int)
+begin
+declare mm1 int;
+declare mm2 int;
+declare mm3 int;
+declare mytotal int;
+declare myaverage double; 
+declare mygrade char; 
+select m1,m2,m3 into mm1,mm2,mm3 from jlcstudents where sid=mysid;
+ set mytotal = mm1+mm2+mm3;
+set myaverage = mytotal/3;
+if(myaverage >= 90) then 
+set mygrade ='A'; 
+elseif(myaverage >= 80) then 
+set mygrade ='B'; 
+else 
+set mygrade ='C'; 
+end if; 
+set mygrade= trim(mygrade); 
+update jlcstudents set total=mytotal, average=myaverage, grade=mygrade where sid=mysid; 
+end; 
+## 
+delimiter ; 
+Call the Procedure as follows 
+call findGrade(101);
+
+
+================================================
+exploring tigger
+--------------------------
+Trigger is a PL/SQL Block with name. 
+=> Trigger will be invoked by DBMS automatically when ever you update or delete or insert 
+the records into the table. 
+=>No Need to call trigger explicitly like Stored Procedure. 
+=> Triggers will be used to run the Business logic on Database side automatically when 
+Some DB operation is happened. 
+
+==========================================
+ Real-World Triggers-:-
+MySQL DB setup 
+create table mystudents( 
+sid int primary key, 
+sname char(25) NOT NULL, 
+email char(25) NOT NULL, 
+phone long 
+); 
+select * from mystudents; 
+insert into mystudents values(101,'Sri','Sri@jlc',111); 
+insert into mystudents values(102,'sd','sd@jlc',222); 
+insert into mystudents values(103,'ds','ds@jlc',333); 
+insert into mystudents values(104,'vas','vas@jlc',444); 
+insert into mystudents values(105,'hello','hello@jlc',555); 
+select * from mystudents; 
+create table mystudents_backup( 
+sid int, sname char(25), email char(25), 
+phone long, action char(15), actiondate date 
+);  
+
+=============================================
+Example 1
+delimiter ## 
+create trigger t1 
+BEFORE UPDATE 
+ON mystudents 
+FOR EACH ROW 
+begin 
+declare mysid int; 
+declare mysname char(25); 
+declare myemail char(25); 
+declare myphone long; 
+declare myaction char(15); 
+declare myactiondate date; 
+set mysid = OLD.sid; 
+set mysname = OLD.sname; 
+set myemail = OLD.email; 
+set myphone = OLD.phone; 
+set myaction ='Update'; 
+set myactiondate = sysdate(); 
+insert into mystudents_backup 
+values(mysid,mysname,myemail,myphone,myaction,myactiondate); 
+end; 
+## 
+delimiter ;
+=====================================
+Do the Following Tasks 
+select * from mystudents; 
+select * from mystudents_backup; 
+update mystudents set email='sri@myjlc.com', phone=123456 where sid=101; 
+select * from mystudents; 
+select * from mystudents_backup; 
+update mystudents set email='aaa@myjlc.com', phone=1010101 where sid=102; 
+select * from mystudents; 
+select * from mystudents_backup; 
+===================================\
+Example #2 
+delimiter ## 
+create trigger t2 
+BEFORE DELETE 
+ON mystudents 
+FOR EACH ROW 
+begin 
+declare mysid int; 
+declare mysname char(25); 
+declare myemail char(25); 
+declare myphone long; 
+declare myaction char(15); 
+declare myactiondate date; 
+set mysid = OLD.sid; 
+set mysname = OLD.sname; 
+set myemail = OLD.email; 
+set myphone = OLD.phone; 
+set myaction ='Delete'; 
+set myactiondate = sysdate(); 
+insert into mystudents_backup 
+values(mysid,mysname,myemail,myphone,myaction,myactiondate); 
+end; 
+## 
+delimiter ; 
+
+============================================
+Do the Following Tasks 
+select * from mystudents; 
+select * from mystudents_backup; 
+delete from mystudents where sid=104; 
+select * from mystudents; 
+select * from mystudents_backup; 
+update mystudents set email='aaa@myjlc.com', phone=1010101 where sid=101; 
+select * from mystudents; 
+select * from mystudents_backup;
+
+                                                                                                                                                                                                                                                                                       

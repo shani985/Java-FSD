@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data type and Variable</title>
+    <style>
+        div {
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 3px solid black;
+            margin: 50px;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding-left: 50px;
+            width: 500px;
+            background-color: teal;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+    </div>
+
+    <script>
+        function myprint(mydata) {
+            mydiv = document.getElementById("mydiv")
+            mydiv.innerHTML = mydiv.innerHTML + mydata + "<br/>";
+        }
+        myprint("<u>Demo 7. Data Type And Variable<br/></u>");
+        var x = 10;
+        myprint(x);
+        var x = "hello guys";
+        myprint(x);
+        let y = 20;
+        myprint(y);
+        y = "hello guys";
+        myprint(y);
+    </script>
+</body>
+
+</html>

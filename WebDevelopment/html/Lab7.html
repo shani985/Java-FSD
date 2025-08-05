@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        body{
+            width:80%
+        }
+        .mytable{
+            width:100%
+        }
+        table,td,th{
+            border:2px solid red;
+            border-collapse: collapse;
+            font-size: 25px;
+            text-align: center;
+        }
+        /* tr:nth-child(odd){
+            background-color: azure;
+            color:blue;
+        }
+        tr:nth-child(even){
+            background-color: lavender;
+        
+            
+        } */
+        td:nth-child(odd){
+            background-color: azure;
+        }
+        td:nth-child(even){
+            background-color: lavender;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <table align="center" class="mytable">
+        <caption>Student Information</caption>
+        <thead>
+            <tr>
+                <th>Sid</th>
+                <th>Sname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>rajat</td>
+                <td>rajat123@</td>
+                <td>3673526</td>
+                <td>java</td>
+            </tr>
+        
+                <tr>
+                    <td>102</td>
+                    <td>shivam</td>
+                    <td>shivam123@</td>
+                    <td>7423526</td>
+                    <td>python</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>amit</td>
+                    <td>amit123@</td>
+                    <td>7423352</td>
+                    <td>java</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>shani</td>
+                    <td>shani9805</td>
+                    <td>7363533</td>
+                    <td>java & python</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>nikhil</td>
+                    <td>nikhil9805</td>
+                    <td>76363533</td>
+                    <td>python</td>
+                </tr>
+                <tr>
+                    <td>106</td>
+                    <td>pavan</td>
+                    <td>pavan9805</td>
+                    <td>7363533</td>
+                    <td>python</td>
+                </tr>
+        
+        </tbody>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>JS : Operators - Part 8</title> 
+    <style> 
+     #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+    </style> 
+</head> 
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+myprint("<u>11) in Operator 12) delete Operator    </u> ") 
+         
+      var mystr=new String("Hello Guys"); 
+      myprint(mystr); 
+      myprint(typeof mystr); 
+ 
+      for(x in mystr){ 
+        myprint(x+"  -  "+mystr[x]); 
+      } 
+      
+      myprint(0 in mystr); 
+      myprint(1 in mystr); 
+      myprint(2 in mystr); 
+ 
+      myprint(9 in mystr); 
+      myprint(10 in mystr); 
+      myprint(11 in mystr); 
+
+ 
+ 
+      myprint(length in mystr); 
+      myprint("-------------"); 
+ 
+      myprint("1. "+mystr[0]); 
+      delete mystr[0]; 
+      myprint("2. "+mystr[0]); 
+      myprint("-------------"); 
+ 
+      myprint("1. "+mystr); 
+      delete mystr; 
+      myprint("2. "+mystr); 
+      myprint("-------------"); 
+  
+      x="hello"; 
+      myprint(x); 
+      delete x; 
+      //myprint(x); 
+      myprint("Done"); 
+ </script> 
+</body> 
+</html>

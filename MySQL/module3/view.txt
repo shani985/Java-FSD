@@ -1,0 +1,170 @@
+view:
+----------
+
+# Views are database objects/entity like Tables,index,view 
+# Views are also called as logical tables. 
+# View contains only the schema part it does not contain the data physically. 
+# View is mainly used to provide the restrictions on columns of a table to particular 
+# Views will be creatd based on one or more existing tables. 
+Syntax: 
+create view <view_name> as select statement; 
+
+Step 1: Create the following table 
+---------------------------------------------
+create table customers( 
+cid int(3) Primary Key, 
+cname char(15) NOT NULL, 
+email char(15) UNIQUE NOT NULL, 
+phone int(10) UNIQUE NOT NULL, 
+city char(15) NOT NULL, 
+status char(15) NOT NULL, 
+accno int(6) UNIQUE NOT NULL, 
+atype char(2) NOT NULL, 
+branch char(10) NOT NULL, 
+bal double 
+); 
+
+-----------------------------------------------------------------------------------------------------
+2) Insert the following Records 
+-----------------------------------------------------------------------------------------------------
+insert into customers 
+values(101,'sri','sri@myjlc',123,'Blore','Active',5001,'SA','B01',25000);
+ 
+insert into customers 
+values(102,'vas','vas@myjlc',321,'Blore','Active',5002,'SA','B01',25000); 
+
+
+insert into customers 
+values(103,'sd','sd@myjlc',234,'Hyd','Active',5003,'SA','B01',25000); 
+
+insert into customers 
+values(104,'ds','ds@myjlc',345,'Hyd','Active',5004,'SA','B01',25000); 
+
+insert into customers 
+values(105,'aa','aa@myjlc',111,'Delhi','Active',5005,'SA','B01',25000); 
+
+insert into customers 
+values(106,'bb','bb@myjlc',222,'Delhi','Active',5006,'SA','B01',25000); 
+
+insert into customers 
+values(107,'cc','cc@myjlc',333,'Blore','Active',5007,'SA','B01',25000); 
+
+insert into customers 
+values(108,'dd','dd@myjlc',444,'Blore','Active',5008,'SA','B01',25000); 
+
+insert into customers 
+values(109,'ee','ee@myjlc',555,'Hyd','Active',5009,'SA','B01',25000); 
+
+insert into customers 
+values(110,'ff','ff@myjlc',666,'Hyd','Active',5010,'SA','B01',25000); 
+
+
+insert into customers 
+values(111,'gg','gg@myjlc',777,'Delhi','Active',5011,'SA','B01',25000); 
+
+insert into customers 
+values(112,'hh','hh@myjlc',888,'Delhi','Active',5012,'SA','B01',25000);
+
+3) see the record 
+select * from customer;
+-------------------------------------------------------------------------------------
+4) Create the View for bank teller and check it 
+
+create view teller_view as 
+select cid,cname,city,accno,atype,bal from customers;
+ 
+select * from teller_view; //OK 
+select email from teller_view; //Error  
+
+----------------------------------------------------------------------------------------------
+5) Create the View for bank teller city-wise and check it 
+----------------------------------------------------------------------------------------------
+create view blore_teller_view as 
+select cid,cname,city,accno,atype,bal from customers where city='Blore';
+ 
+select * from blore_teller_view; 
+
+create view hyd_teller_view as 
+select cid,cname,city,accno,atype,bal from customers where city='Hyd'; 
+
+select * from hyd_teller_view; 
+
+create view delhi_teller_view as 
+select cid,cname,city,accno,atype,bal from customers where city='Delhi'; 
+
+select * from delhi_teller_view; 
+------------------------------------------------------------------------------------------------------
+6) Create the View for support team and check it 
+----------------------------------------------------------------------------------------------------
+
+create view support_view as 
+select cid,cname,email,phone,city,status from customers; 
+
+select * from support_view; //OK 
+select bal from support_view; //Error
+-------------------------------------------------------------------------------------------------------
+Types of Views 
+--------------------
+# Depending on the updation of data with view you can divide the view into two 
+types. 
+1)Static Views 
+2) Dynamic Views 
+
+Static Views 
+1) Static View is also called as read only view. 
+2)If view is Static View then you can only read the data from view, you cannot 
+perform any insert, delete or update operation on view. 
+3) When view creation statement meets any of the following terms then it becomes 
+Static view. 
+4) Select Statement is having order by clause 
+5)Select Statement is having group by clause 
+6) Select Statement is not having Primary Key. 
+-----------------------------------------------------------------------------------------------------------
+
+Dynamic Views 
+1) Dynamic View is also called as updatable view. 
+2) If view is Dynamic View then you can read the data from view as well as you can 
+perform insert, delete or update operation on view also. 
+3) When view creation statement meets any of the following terms then it becomes 
+Static view. 
+4) Select Statement is not having order by clause 
+5) Select Statement is not having group by clause 
+6) Select Statement is having Primary Key. 
+
+consider the support view
+select  * from customers;
+create view support_view as 
+select cid ,cname, email,phone,city,status from customers;
+select * from support_view;
+update support_view set email='sd@mjlc.com',phone=999 where cid=103;
+select * from support_view;
+select * from customer;
+delete from support_view where cid >= 110;
+
+-------------------------------------------------------------------------------------------------------
+7) Do the Updatable Operations on myview as follows 
+--------------------------------------------------------------------------------------------------------
+
+a) Create the myview as follows 
+create view myview as 
+ select cid,cname,email,phone,city,status from customers; 
+
+b) See the Data in table and myview 
+select * from myview; 
+select * from customers; 
+
+c) Update the data in myview 
+update myview set email='sd@jlc.com', phone=999 where cid=103; 
+
+d) See the Data in table and myview 
+select * from myview; 
+select * from customers; 
+
+e) Update the data in myview 
+delete from myview where cid>=110; 
+
+f) See the Data in table and myview 
+select * from myview; 
+select * from customers;
+
+

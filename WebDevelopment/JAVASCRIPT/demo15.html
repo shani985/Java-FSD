@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>JS : Operators - Part 5</title> 
+    <style> 
+    #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+    </style> 
+</head> 
+
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+        myprint("<u>6) Ternary Operator   ? :  </u> ") 
+        var a=10; 
+        var b=20; 
+ 
+        var max=(a>b) ? a: b; 
+        myprint("Max : "+max); 
+        var min=(a<b) ? a: b; 
+        myprint("Min : "+min); 
+ 
+        myprint("--------"); 
+        var a=10; 
+        var b=20; 
+        var c=30; 
+        var max=(a>b && a>c) ? a : (b>c) ? b :c; 
+        myprint("Max : "+max); 
+        var min=(a<b && a < c) ? a : (b < c) ? b :c; 
+        myprint("Min : "+min); 
+ 
+ </script> 
+</body> 
+</html>

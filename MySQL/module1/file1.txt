@@ -1,0 +1,12 @@
+
+                                                      Basic Operation
+Q1  To see all databases command
+Ans : show databases;
+Q2  To create database command
+Ans : create database mydata;
+Q3: To drop the database
+Ans: drop  database mydata;
+Q4 To select required Database 
+Ans : use  myjlc;
+Q5 To see the list of tables in the databases
+Ans : show tables;

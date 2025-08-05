@@ -1,0 +1,16 @@
+.mycourse{
+  
+    color:teal;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    border:3px solid blue;
+    width:400px;
+    margin-left: 10%;
+    margin-right: 25%;
+    margin-bottom: 5px;
+    margin-bottom: 200px;
+    padding: 10px;
+    background-color:yellow;
+}

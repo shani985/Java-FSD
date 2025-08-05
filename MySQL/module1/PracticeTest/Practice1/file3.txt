@@ -1,0 +1,175 @@
+==============================
+ A)  create table 
+==============================
+create table student(
+sid int(3) primary key,
+sname char(15),
+email char(15),
+phone long,
+city char(15),
+course char(15),
+bal double
+);
+
+
+==================================
+ B) insert 10 record 
+==================================
+insert into student values(101,'sri','sri@jlc',123456,'blore','java',9000);
+insert into student values(102,'vas','vas@jlc',654321,'blore','java',15000);
+insert into student values(103,'ds','ds@jlc',1234,'blore','DevOps',3000);
+insert into student values(104,'sd','sd@jlc',4321,'hyd','AWS',5000);
+insert into student values(105,'hello','hello@jlc',55555,'Delhi','java',8000);
+insert into student values(106,'hai','hai@jlc',99999,'blore','AWS',6000);
+insert into student values(107,'aaa','aaa@jlc',1111,'pune','devOps',22000);
+insert into student values(108,'bbb','bbb@jlc',2222,'Delhi','java',7000);
+insert into student values(109,'ccc','ccc@jlc',3333,'blore','java',20000);
+insert into student values(110,'ddd','ddd@jlc',4444,'hyd','python',5000);
+
+======================================
+C) Play with Queries
+======================================
+Q1
+Ans:
+  select * from student;
+
+Q2
+Ans :
+select Sname,phone,bal from student;
+
+Q3
+Ans;
+select sname,course from student;
+Q4
+Ans;
+select *from student where sid=105;
+Q5
+Ans:
+select * from student where city='blore';
+0r
+select * from student where  city IN('blore);
+Q6
+Ans:
+select * from student where city='hyd' OR city='Delhi' ;
+or 
+select * from student where  city IN('hyd','Delhi');
+
+Q7
+Ans:
+select * from student where city='hyd' OR city='Delhi' OR  city='pune' ;
+or 
+select * from student where  city IN('hyd','Delhi','pune');
+Q8
+Ans:
+select  *from student where  city!='hyd' AND city!='blore' ;
+or
+select * from student where city NOT IN('hyd','blore');
+Q9
+Ans:
+select * from student where bal>5000;
+
+Q10
+Ans:
+select * from student where bal<=5000;
+Q11
+Ans:
+select *from student where bal>=8000 AND bal<=20000;
+or 
+select * from student where bal BETWEEN 8000 AND 20000;
+Q12
+Ans:
+select *from student where bal>8000 AND bal<15000;
+Q13
+Ans:
+select * from student where bal <=8000 OR bal>=20000;
+
+Q14
+Ans:
+select *from student where bal<8000 AND bal>20000;
+or
+select * from student where bal  NOT BETWEEN 8000 AND 20000;
+Q15 
+Ans :
+Select * from student where bal>=15000 AND city='blore';
+Q16 
+Ans :
+Select * from student where bal>=5000 AND city='blore' AND  course='AWS';
+Q17
+Ans : 
+select * from student where course IN('java','python','AWS');
+
+Q18 
+Ans:
+select * from student where city='blore' AND course IN ('java','AWS','python');
+Q19
+Ans:
+select * from  student where course IN('java','AWS') 
+AND city IN('blore','Delhi') 
+AND bal BETWEEN 8000 AND 20000;
+or
+select * from  student where course IN('java','AWS') 
+AND city IN('blore','Delhi') 
+AND bal >=8000 AND bal<=20000;
+Q20
+Ans:   
+select * from student where name LIKE 's%';
+Q21
+Ans:   
+select * from student where name LIKE '%s';
+Q22
+Ans:   
+select * from student where sname LIKE '_a%';
+                          
+Q23
+Ans:   
+select * from student where sname LIKE '%d%';
+Q24
+Ans:   
+select * from student where sname LIKE '%a_';
+                          
+Q25
+Ans:   
+select * from student where email LIKE '%gmail.com';
+                          
+Q26
+Ans:   
+select * from student where  city IS NULL;
+Q27
+Ans:   
+select * from student where city IS NOT NULL ;
+Q28
+Ans:   
+select * from student where name LIKE '_a%' 
+AND  city='blore'
+And bal >=10000;
+Q29
+Ans:   
+select * from student where email NOT LIKE '%gmail.com'
+AND city!='blore'
+AND bal<=10000
+AND course = 'java';
+Q30
+Ans :
+select * from student  
+order by bal ;
+or
+select * from student  
+order by bal  ASC;
+Q31
+Ans :
+select * from student  
+order by bal  DESC;
+
+Q32
+Ans :
+select * from student 
+where city='blore' 
+order by bal ;
+
+                          
+                          
+                          
+                          
+                          
+                          
+                          

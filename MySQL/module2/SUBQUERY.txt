@@ -1,0 +1,85 @@
+Q1) Display the Bal of the Customer whose Phone is 333 (Phone is Unique) 
+Ans: 
+
+Without Subquery 
+select cid from customer where phone=3333; ( sub query) 
+select bal from accounts where mycid=103; ( main query) 
+With Subquery 
+select bal from accounts 
+where mycid = (select cid from customer where phone=3333) ; 
+--------------------------------------------------------------------------------------------------------
+14. Sub Queries
+------------------------------------------------------------------------------------------------------ 
+Q2) Display the Accno and Bal of the Customers who are staying in Blore. 
+Ans: 
+Without Subquery 
+select mycid from address where city='Blore'; ( sub query) 
+select accno,bal from accounts where mycid = (101,102); ( main query) 
+With Subquery 
+select accno,bal from accounts 
+where mycid IN (select mycid from address where city='Blore') ; 
+--------------------------------------------------------------------------------------------------------
+
+
+Q3) Display the City of Customer whose email is ccc@jlc (Email is Unique) 
+Ans: 
+select city from address 
+where mycid = (select cid from customer where email='ccc@jlc') ; 
+-----------------------------------------------------------------------------------------------------
+
+Q4) Display the cname,email, phone of customer whose accno is 12345. 
+Ans: 
+select cname,email,phone from customer 
+where cid=(select mycid from accounts where accno=12345); 
+-----------------------------------------------------------------------------------------------------
+
+Q5) Display the Customers who are not maintaining the Min Balance in the Account.(min = 
+20000) 
+Ans: 
+select cname,email,phone from customer
+where cid IN (select mycid from accounts where bal<20000);
+-------------------------------------------------------------------------------------------------------
+ 
+Q6) Display the cname,email,street,city who are not maintaining the Min Balance in the 
+Account.(min = 20000) 
+Ans: 
+select cname,email,street,city 
+from customer cust inner join address addr on cust.cid = addr.mycid and cid IN (select 
+mycid from accounts where bal<20000); 
+---------------------------------------------------------------------------------------------------------
+
+Q7) Display cname,email,accno,bal,street,city of customers who are in Blore. 
+Ans: 
+select cname,email,accno,bal,street,city 
+from customers cust 
+inner join accounts acc on cust.cid=acc.mycid 
+inner join address addr on cust.cid = addr.mycid and addr.mycid in (select mycid from 
+address where city='Blore'); 
+-----------------------------------------------------------------------------------------------------------
+
+Creating new table from existing table
+===================================================================
+
+Q8) Create table from customers with all columns and data 
+Ans: 
+create table mycust1 as 
+select * from customer; 
+--------------------------------------------------------------------------------------------------------
+
+Q9) Create table from customers with cid,cname,phone columns and data 
+Ans: 
+create table mycust2 as 
+select cid,cname,phone from customer;
+-------------------------------------------------------------------------------------------------------
+ 
+Q10) Create table from customers with all columns and without data 
+Ans: 
+create table mycust3 as 
+select * from customer where 1=2; 
+---------------------------------------------------------------------------------------------------------
+
+Q11) Create table from customers with cid,cname,phone columns and without data 
+Ans: 
+create table mycust4 as 
+select cid,cname,phone from customer where 1=2; 
+ -----------------------------------------------------------------------------------------------------

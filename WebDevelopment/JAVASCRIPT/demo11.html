@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>JS : Operators - Part 1</title> 
+    <style> 
+    #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+     </style> 
+ </head> 
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+      myprint("<u>1) Arithmetic Operators </u> :") 
+  
+        var a=5; 
+        var b=2 
+        myprint(" a  =>"+ a); 
+        myprint(" b  =>"+ b); 
+        myprint("a + b => "+ (a + b)); 
+        myprint("a - b => "+ (a - b)); 
+        myprint("a * b => "+ (a * b)); 
+                                      
+        myprint("a ** b => "+ (a ** b)); //to the power 
+        myprint("a / b => "+ (a / b));   // result is number 
+        myprint("a % b => "+ (a % b));   
+ 
+        myprint("<u>2) Assignment Operators </u> :") 
+  
+        var a=5; 
+         
+        a+=2;  // a=a+2; 
+        myprint(" a  =>"+ a); 
+ 
+        var a=5; 
+        a-=2;  // a=a-2; 
+        myprint(" a  =>"+ a); 
+ 
+        var a=5; 
+        a*=2;  // a=a*2; 
+        myprint(" a  =>"+ a); 
+ 
+        var a=5; 
+        a**=2;  // a=a**2; 
+        myprint(" a  =>"+ a); 
+ 
+        var a=5; 
+        a/=2;  // a=a/2; 
+        myprint(" a  =>"+ a); 
+ 
+        var a=5; 
+        a%=2;  // a=a%2; 
+        myprint(" a  =>"+ a);  
+         
+ </script> 
+</body> 
+</html>

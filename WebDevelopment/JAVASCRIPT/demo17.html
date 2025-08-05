@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>JS : Operators - Part 7</title> 
+    <style> 
+     #mydiv{
+            border: 5px solid red;
+            border-radius: 20px;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px;
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+            color: red;
+        }
+    </style> 
+</head> 
+<body> 
+    <div id="mydiv">  </div>     
+    <script> 
+        function myprint(data){ 
+            var mydiv= document.getElementById("mydiv"); 
+            console.log(mydiv); 
+            mydiv.innerHTML =  mydiv.innerHTML + data +"<br/>"; 
+        } 
+     myprint("<u>8) typeof, 9) new , 10) instanceof    Operator</u> ") 
+        
+        var a=19; 
+        myprint(a); 
+        myprint(typeof a); 
+   
+        a=9.9; 
+        myprint(a); 
+        myprint(typeof a); 
+ 
+        a="Hello Guys"; 
+        myprint(a); 
+        myprint(typeof a); 
+      
+        var mystr=new String("Hello Guys"); 
+        myprint(mystr); 
+        myprint(typeof mystr); 
+
+ 
+    var arr=new Array(3); 
+      arr[0]=10; 
+      arr[1]=20; 
+      arr[2]=30; 
+      myprint(arr); 
+      myprint(typeof arr); 
+ 
+      var dob=new Date(); 
+      myprint(dob.getDate()+"-"+dob.getMonth()+"-"+dob.getFullYear()); 
+      myprint(typeof dob); 
+     
+      myprint("---------------");  
+      myprint(dob instanceof Date); //T 
+      myprint(dob instanceof Array); 
+      myprint(dob instanceof String); 
+      myprint("---------------");  
+      myprint(arr instanceof Date); 
+      myprint(arr instanceof Array); //T 
+      myprint(arr instanceof String); 
+      myprint("---------------");  
+      myprint(mystr instanceof Date); 
+      myprint(mystr instanceof Array); 
+      myprint(mystr instanceof String); //T 
+ 
+      myprint("---------------");  
+ 
+      myprint(mystr instanceof Object);  
+      myprint(arr instanceof Object);  
+      myprint(dob instanceof Object);  
+ 
+ </script> 
+</body> 
+</html>
