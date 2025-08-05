@@ -1,6 +1,8 @@
 *.class
+*.metadata
 /*.metadata
 /bin/
+.project
 /*.project
 /*.settings
 /node_modules
