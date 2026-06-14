@@ -1,0 +1,9 @@
+class Test18 {
+public static void main(String[] args) {
+ show((short)0);
+}
+static void show(short sh) {
+ System.out.println("show");
+ System.out.println(sh);
+}
+} 
